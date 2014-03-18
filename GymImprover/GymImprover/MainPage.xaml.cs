@@ -22,6 +22,16 @@ namespace GymImprover
             //BuildLocalizedApplicationBar();
         }
 
+        private void About_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/About.xaml", UriKind.Relative)); 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/UserPage.xaml", UriKind.Relative)); 
+        }
+
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
         //{

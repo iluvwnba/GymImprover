@@ -17,3 +17,5 @@ C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\GymImprover
 C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\GymImprover.dll
 C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\GymImprover.pdb
 C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\XapCacheFile.xml
+C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\About.g.cs
+C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\UserPage.g.cs
