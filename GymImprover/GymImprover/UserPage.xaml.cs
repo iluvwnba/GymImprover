@@ -19,8 +19,11 @@ namespace GymImprover
             InitializeComponent();
             model = new UserViewModel();
             this.DataContext = model;
-                
         }
-  
+
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/UserFoodPage.xaml", UriKind.Relative)); 
+        }
     }
 }

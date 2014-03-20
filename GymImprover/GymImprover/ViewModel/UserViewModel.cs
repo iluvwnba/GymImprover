@@ -38,7 +38,7 @@ namespace GymImprover.ViewModel
 
         public ObservableCollection<User> DataSource
         {
-            get
+            get 
             {
                 if (this.userData == null)
                 {

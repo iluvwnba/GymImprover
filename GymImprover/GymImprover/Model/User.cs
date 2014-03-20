@@ -14,6 +14,7 @@ namespace GymImprover.Model
         private string username;
         private string password;
 
+
         public User(string name, int weight, string userName, string password)
         {
             this.Name = name;
@@ -71,6 +72,9 @@ namespace GymImprover.Model
                 }
             } 
         }
+
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 

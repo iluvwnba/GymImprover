@@ -23,7 +23,7 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Gym Improver" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="User Page" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Home" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
@@ -40,9 +40,14 @@
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>
             </phone:LongListSelector>
-            <Button Content="Load Data" Command="{Binding LoadData}" HorizontalAlignment="Left" Margin="150,340,0,0" VerticalAlignment="Top"/>
+            <Button Content="Load Data" Command="{Binding LoadData}" HorizontalAlignment="Left" Margin="148,305,0,0" VerticalAlignment="Top"/>
 
         </Grid>
     </Grid>
-
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
+            <shell:ApplicationBarIconButton Text="Workout" IconUri="/Assets/AppBar/new.png"/>
+            <shell:ApplicationBarIconButton Text="Eat" IconUri="/Assets/AppBar/Eat.png" Click="ApplicationBarIconButton_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>
