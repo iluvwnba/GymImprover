@@ -1,0 +1,1849 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="63e48749-54b8-41f9-bb4e-c9fc1cac1cd9"
+  name="Model"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ef567722-9a64-4d0e-a3ef-32fa16e0de5b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGymImprover.Model"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="9eaa8991-59b8-4c56-b77a-c14a16375b0e"
+        name="Food"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="49739875-4076-41ba-8040-4953dfadc3a8"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="74aca871-90fd-4577-acca-1be8e771e290"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="05286a5d-eeef-49e2-a251-a1a36a88d137">
+                <propertyInstance
+                  Id="b954ab2a-09a0-4084-8769-c2821fb85024"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="38f6e502-d939-4dc7-9bc3-41d9678b85e6">
+                <propertyInstance
+                  Id="1b864dfc-6548-4320-99ca-8efddb44b8db"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1bf07992-2447-487a-a88b-6e088db60e85">
+                <propertyInstance
+                  Id="cff5c288-8dfd-4274-bac2-857f34d6ec3d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="94fab8ab-5344-41fb-9e09-ef56674dd6bb">
+                <propertyInstance
+                  Id="c19fb4cd-9081-4566-be9a-3a7df62c534e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f001b17-a602-4065-b0b2-b16f8b3ad55f">
+                <propertyInstance
+                  Id="01ffb088-1a8d-40fc-a23c-f74b18f83fe1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="9c85ba88-44b7-44fb-945c-b9effcc228a0">
+            <interfaceMoniker
+              Id="48a281ec-051b-4b22-b1ac-cb7ec08da3b2"
+              LastKnownName="INotifyPropertyChanged"
+              LastKnownLocation="Package9_0018.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="6ce3ebb6-986e-4707-a914-c5c3e016e7ca"
+            name="Calories"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="80d76e32-3e47-439e-8589-3042ac885b3b"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3DCalories"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f444faa3-504d-4db5-b596-9f3109bec202"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e77703ce-530a-41bb-a8e9-93c342987557">
+                    <propertyInstance
+                      Id="d65946dc-b571-4d74-89bd-1e80e5d45d15"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94270c97-8325-4534-9452-e724e354de3a">
+                    <propertyInstance
+                      Id="e91d455f-7a8c-411b-9e45-0e9ddb2ec6df"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88019406-e08d-4769-b1de-0c1e08838491">
+                    <propertyInstance
+                      Id="38942e3e-0cc2-4195-a1c2-12e0978f5e4d"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23bdf40e-bc64-4258-9f32-d7c688ca82dc">
+                    <propertyInstance
+                      Id="d4be7dee-f481-45bb-93c0-77188b0cc9e8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93e441d3-412c-4707-8753-0da19ce6f8f2">
+                    <propertyInstance
+                      Id="9079d451-fdee-4e9e-83f6-b889fa7b2150"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6555654-5507-4fb2-953b-3eacbe672534">
+                    <propertyInstance
+                      Id="9a3b8713-c877-42c1-a04d-755a0055a4c2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f61ca9b-a4fc-436d-8dc1-7b3f832f8cdf">
+                    <propertyInstance
+                      Id="672e6661-3aed-4eab-a449-fe744e5b19db"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="dcf69bce-b585-4038-8ead-c24ef6d82206"
+            name="Carbohydrates"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="497ee679-3392-413a-bf85-87329c886922"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3DCarbohydrates"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="47c6996e-a5d6-4a09-8f7a-9b1bc14c98ec"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6038b61-14d0-4991-bfa4-10c04af257aa">
+                    <propertyInstance
+                      Id="02dbe0d4-ca8b-4533-8c7a-5cd2394a5e1a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31cc7eb6-9f33-4870-aa29-b905dc8e4c1d">
+                    <propertyInstance
+                      Id="a15b55be-5616-4eab-aa52-05c8b7ef728f"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5604b5d4-a0fd-4a64-9e76-351cee66e4a6">
+                    <propertyInstance
+                      Id="bedfa60e-4338-4d60-9a9c-1f6b5f944d01"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8b8f1fa0-e855-4212-a138-cf8e0ff9f6f7">
+                    <propertyInstance
+                      Id="58bfa36f-5a3f-44e7-91f8-fab0bb9dfd46"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="376c4006-3262-43f0-b1f8-328e7b4d6c08">
+                    <propertyInstance
+                      Id="50d56064-2571-4efa-b927-ca5144394419"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b62c5730-ce2c-4345-b641-6e9ffc84ff86">
+                    <propertyInstance
+                      Id="8423f5b3-e671-4d30-8372-b85c88e6a3b3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f28635c8-4421-465d-97b8-ee0d6ae78397">
+                    <propertyInstance
+                      Id="9cf9a44b-cf41-496c-bf9b-afda9995882c"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="78f8866e-4ce4-4b5c-9e57-b2bf7364fedc"
+            name="Fats"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="daa7e0f0-f0dc-4433-acb7-45d43ab42728"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3DFats"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e893b59a-2bd2-407a-b1d9-18ab8c8db9f6"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca468eee-ef0b-4346-9401-6fa35c239f02">
+                    <propertyInstance
+                      Id="78641032-6dba-4056-b0f7-c49cca668626"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32ba675f-d997-42ff-adec-86b36d7aa9fa">
+                    <propertyInstance
+                      Id="f1fbab45-9e99-4fe8-bd2c-a5556cf87e9c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86599cdc-0b6b-4925-9479-beea9c04f4b8">
+                    <propertyInstance
+                      Id="e798c567-9193-4d8e-8a1e-0f58b4b47216"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3338733-18ef-4456-9a49-badde269d5b5">
+                    <propertyInstance
+                      Id="2c24fa53-f1dc-45c3-9376-042b61084ede"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="767565e0-ecc7-4f16-a094-bfe0b381b090">
+                    <propertyInstance
+                      Id="2af7dbd6-de99-41fc-84c9-d2d4ad3cec5c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33bddac5-bb03-4cf5-be19-1bde885f2a34">
+                    <propertyInstance
+                      Id="c123eba4-aa54-4ff9-a814-d9475b98001a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3f77ccb8-5471-497d-aa3a-4b5d6fdfb786">
+                    <propertyInstance
+                      Id="67fbe5ad-e39e-4e3b-ad97-5a915a112bf7"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="777ff0ef-fc3d-416f-837d-d989c4ec1a9e"
+            name="Protein"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f192cfde-55c5-4661-be7e-22e4eed2c5e3"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3DProtein"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="de612e2f-ee13-4873-8271-d88f530e1205"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe96bd33-c75d-420f-b9da-c58ec63b2ce0">
+                    <propertyInstance
+                      Id="9a65426a-1354-48c7-83a6-9b25beef00ba"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="514dfa24-94ea-4c22-8790-1321d3e57cc6">
+                    <propertyInstance
+                      Id="68ddb30c-3b5e-4f49-b74b-5222bb8e277b"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4fe5c14d-fafc-4ba5-9ae2-c99f8666940b">
+                    <propertyInstance
+                      Id="086547c2-9d08-45ed-9f88-d56af99c281c"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d866ac1e-00d4-4005-93d1-f15a7ae6a555">
+                    <propertyInstance
+                      Id="bd1edfa8-c3ca-4a4b-b1f1-b27c34b18c90"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af2048d6-bf0d-40da-b043-1e14bdc59d13">
+                    <propertyInstance
+                      Id="07af40e4-db2b-4d6b-a7de-0bd297f0a765"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="79446a65-3743-4530-aee0-de640bc6a1e9">
+                    <propertyInstance
+                      Id="79e04615-983a-4948-854a-f6a0e857c0fa"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="556ae0cc-7c34-4372-a878-811e953a70d3">
+                    <propertyInstance
+                      Id="e7cfb884-4859-4835-b191-62e37f8ccf8f"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a3ebd8c9-784d-45f0-8a72-1161a3691d3b"
+            name="PropertyChanged"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="5594f535-e8f8-4c19-bcb3-8be0c2cc6bc0"
+                handle="viewcode://./CodeSchema_Event?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3DPropertyChanged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dc62bf10-ad3a-409c-b257-988271ad1322"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc74caf1-904d-4c3c-8572-2d67bd795596">
+                    <propertyInstance
+                      Id="e93126e3-981f-4715-8bc8-8a747582bd6c"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="07b92d40-778a-4aae-a022-743a5660ee89">
+                    <propertyInstance
+                      Id="6045bbc5-ab2d-4f5d-815e-8bbf57c43623"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b48ec0d6-28e0-4c9b-ad82-69fb6c8ea012">
+                    <propertyInstance
+                      Id="bea84bac-1aa9-40eb-8664-7fa20136aa5a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75aae18c-8239-4300-839a-ca20ad2d009b">
+                    <propertyInstance
+                      Id="088d8331-c735-4360-a10b-537ffc4517c3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="58202b8e-9eb5-4969-a9ce-361300180930">
+                    <propertyInstance
+                      Id="c2e263aa-bed7-4838-b18c-a1d30771be79"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="896f9686-953f-4959-86bf-97e133834ee0"
+                LastKnownName="PropertyChangedEventHandler"
+                LastKnownLocation="Package9_0018.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="223dfe95-2c5f-4c9c-a0e6-fe646e054339"
+            name="calories"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e4f6d4b9-2274-4c55-b789-aa9a3d260109"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3Dcalories"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6405f96d-792f-45cb-9e7b-c3b7d3c9c7cf"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ada9e3d0-1786-4806-81c3-031ca4acc815">
+                    <propertyInstance
+                      Id="f9900c13-0616-4603-8e24-cee06e8dc0ae"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="74c280e0-4b5e-465e-8145-5b493e510a54">
+                    <propertyInstance
+                      Id="9ea3bfe8-01ce-40c2-b58d-9e4166f2c8e3"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50c2ed3f-dad4-44a8-8adc-bd269ef86a91">
+                    <propertyInstance
+                      Id="d4bd6b40-6ce9-49b4-b18a-d38b6e0aa655"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3669f6b9-ff33-4972-9aa0-a78da7e2a7c7">
+                    <propertyInstance
+                      Id="2fcc5c76-15e0-43fe-b290-45e8180783f0"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="25722554-1892-440f-9ce9-c9adb8bfc6b8">
+                    <propertyInstance
+                      Id="4eaf2e30-e560-4b9c-ab81-47221c25ee10"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="feb4019d-de92-4597-b1e7-72998edafd4e"
+            name="carbohydrates"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a8ad93f6-8ebf-4572-8891-4dbf4fcde3e0"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3Dcarbohydrates"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6593eee7-2a4d-4c7a-86ad-3969c1fdb500"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e301b631-4b38-4c25-8502-972277c7137b">
+                    <propertyInstance
+                      Id="2d00cf95-ebec-40f6-8a45-00a865e3e5e2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e8100dd-9843-49a4-a0d2-8c68d9decb2b">
+                    <propertyInstance
+                      Id="290fb094-e240-4c67-9abd-aa0d9c5cca29"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bbabfbe0-3ea3-4c3d-8ab0-425c6a62f201">
+                    <propertyInstance
+                      Id="ba95f583-1773-4353-8973-e9250a854124"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f2fbe1ec-bb0f-4000-957d-20c935c30038">
+                    <propertyInstance
+                      Id="fd69df93-6a27-49f3-9927-345181eee3c8"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3308274b-980c-45e5-8df3-118f6e1eb783">
+                    <propertyInstance
+                      Id="421d7b39-be5c-48b1-a5a0-c1727b2abd7e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="59403f21-d570-43c3-91e7-5e4a9abe57f4"
+            name="fat"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4776491d-6c42-486a-b299-d851fb753ab6"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3Dfat"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bdb2ae5d-8535-45ab-9b1a-2360b65e2e9f"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="251bb7ae-2eb1-4fd7-a67e-f01d769cc5c3">
+                    <propertyInstance
+                      Id="83321742-a620-40bc-b3f4-757ab8348683"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d165cea-51a9-48b9-b91f-3382e45add82">
+                    <propertyInstance
+                      Id="1a8c10db-621d-4a1f-a9e7-f3f1d2666910"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bf8294a9-8fb9-4d42-acb6-0e3fa27b33b9">
+                    <propertyInstance
+                      Id="1f9e7580-79c3-4611-a299-dd4a536d0d04"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97a4b223-7fb3-4517-add9-0d96b52bc0b6">
+                    <propertyInstance
+                      Id="9cdef823-294c-4151-b578-ab1c0cdc7d27"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="954c02b0-0446-4613-a610-5da509e506dc">
+                    <propertyInstance
+                      Id="89377be2-a87d-4ec6-885c-d74ea5a284b7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5b7179b3-ea76-450b-bdb6-f54ea98fd471"
+            name="protein"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="fd6bb642-18bc-428d-ae5d-9682bcdd6258"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3Dprotein"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9f463d36-a750-4b9e-a2f2-c4376da1b5b6"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0c2c824-e079-4cd2-ba2b-de56db8431a3">
+                    <propertyInstance
+                      Id="9525a18b-3f7f-4700-badf-babee514c377"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf6a1d59-78bc-4000-87f8-4a5db5969e0f">
+                    <propertyInstance
+                      Id="4479a93d-c24f-4755-9fae-52135bd32082"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c59ed9c-bb8e-4363-a704-22a80f368fdf">
+                    <propertyInstance
+                      Id="08b8c7a4-3697-426b-8a54-180c0f699fce"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca26d44c-afa6-4267-893b-9ea5a93c594a">
+                    <propertyInstance
+                      Id="c2c7d549-fe7a-494e-b3b0-15cde4867a12"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4cc54e59-06ab-4977-baa8-b0ebc051fbe4">
+                    <propertyInstance
+                      Id="7d797e3e-45ca-4941-b341-8863badffd5b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ecbabd88-c478-4c06-a1a9-6128935cce0a"
+            name="RaisePropertyChanged"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="fdfdc51a-6187-415a-9b80-9746e4c9b1bd"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3D(Name%3DRaisePropertyChanged OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="742beecb-4f0e-49b8-910f-a74b8b84f79d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6d5ca828-e24b-4b07-a02d-51be0b7d00bc">
+                    <propertyInstance
+                      Id="79f0e6f6-b309-4f12-bd9e-1c00fb329e8e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6fdd4a26-8b15-4d38-be6d-e9c8ddfd3bfa">
+                    <propertyInstance
+                      Id="004cc8a3-cf26-4a02-9451-d29d5105b22c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08712afc-7d8e-499d-a276-dbf199946685">
+                    <propertyInstance
+                      Id="0d340c58-76f1-409d-8e53-3095bf6061c5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb271942-6387-4e32-948a-3d94440ae28d">
+                    <propertyInstance
+                      Id="de825592-8f97-4e9b-90f2-b678b04849bf"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd97448b-d526-4adf-b8f2-1b132d88b513">
+                    <propertyInstance
+                      Id="59ece56a-33fd-42bc-9919-3ea1a7bff375"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="794ec5a3-0859-405e-9b6a-2ebcf68549f0">
+                    <propertyInstance
+                      Id="14f93265-139b-48d1-962a-5223b38b2991"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1a80b39f-2c3b-4d1a-916a-2a6ae068bc7a"
+                  name="propertyName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="5300a336-74af-4cd0-a4b9-bc5f56fce828"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3D(Name%3DRaisePropertyChanged OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DpropertyName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Project Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="73cee96d-62a4-47bc-a9d7-d7690f090504"
+            name="Food"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7e07c20a-7420-4b6f-9a27-239c4e2de398"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DFood Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f790ba38-543a-4394-8cb6-ef431ae36c8c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe7aed2b-d903-44a5-b682-0c5071ba0520">
+                    <propertyInstance
+                      Id="b74f4d01-3f94-466e-b961-3751f4e5b619"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dbd751e7-f8d9-48ba-bdef-d8a614ddd363">
+                    <propertyInstance
+                      Id="72b6f141-e21e-4d46-b7fe-b82505473fcf"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0df564c-a406-40fb-b3a3-535f1569b06c">
+                    <propertyInstance
+                      Id="cb8908ed-2c1e-4c3f-90b1-2e7313f51d0d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b464ab15-b515-46fd-9fc3-d5c8e963d114">
+                    <propertyInstance
+                      Id="f7d448e8-2f92-46f4-82fb-5490958bfd54"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3209af0-8ee9-40be-ad02-4a0a7a07cadf">
+                    <propertyInstance
+                      Id="203a5c99-1f7b-4d60-833b-f06935d5fb70"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9a1c8c5-8280-4c33-a527-0a69025d2036">
+                    <propertyInstance
+                      Id="d793f662-d8c6-4a70-9e7a-a91d153f9d76"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="534de856-ec7f-4906-9a55-8cfca0929d19"
+        name="User"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="de78f430-5cb9-470b-b29e-165e8c8fa3e2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e30cd52a-b94d-4a80-b2cf-b583910e32d9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="024da272-e4d6-473d-8ccd-cb0fc9eacbce">
+                <propertyInstance
+                  Id="1741cf49-aa63-4bc1-bc3f-50a89361aadc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b2e60e46-29d2-4b26-8bb4-49fdee1ff41f">
+                <propertyInstance
+                  Id="b6b2f009-c6fb-41cb-958e-4820af5c9fab"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5697c863-4c64-4135-b559-f51823b79c0c">
+                <propertyInstance
+                  Id="5f9b451b-4e15-48b4-9336-cf99e336a23f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4e2586c5-eabd-45c3-8e33-2a4b1ada280d">
+                <propertyInstance
+                  Id="0fb8f42b-b9b1-4fbc-a24a-27933df237fe"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1cab2634-bdc7-4a41-a7f9-b9f2225e15fc">
+                <propertyInstance
+                  Id="17b75f98-e21e-47fc-9295-4e884808833c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="9eab67d7-77a4-4d41-a53a-3504e6a0b721">
+            <interfaceMoniker
+              Id="48a281ec-051b-4b22-b1ac-cb7ec08da3b2"
+              LastKnownName="INotifyPropertyChanged"
+              LastKnownLocation="Package9_0018.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="195c5a87-cfe2-4cf1-8b17-3dad43e4a0e8"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="adbd71a1-047f-46f4-8c73-465863cfb061"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3DName"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="79e366ba-391e-4b11-a9f6-dede47d5401f"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="036b9542-e0c2-44b0-bf2e-f7df1778138c">
+                    <propertyInstance
+                      Id="2f4e5a51-1f6a-4b7e-bef9-ffefc168534d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e504e650-a1b4-44e7-a37d-4f1277be42fa">
+                    <propertyInstance
+                      Id="8c913ca6-78d4-4574-9271-a678ff800afe"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8ab688f-1b29-4bdb-80bb-5ec928e0ae6f">
+                    <propertyInstance
+                      Id="650b93da-6239-40c2-ac96-4b27ecff11fe"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e435450-f906-4f7c-87e7-251e358404a1">
+                    <propertyInstance
+                      Id="34b2876b-8ab3-4b2f-987c-75b49bd13a60"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cc4fdf0-996a-4ae0-8fb0-383ba7d24f31">
+                    <propertyInstance
+                      Id="db8b5908-8b09-46e4-a7b1-9b79ff24b6d8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="35c325b0-6f71-4f5d-ba5d-b34e44174b2f">
+                    <propertyInstance
+                      Id="8b8f3d57-47bf-470b-89f2-47c4f6aa82e6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a8197a1-3254-4a10-ad74-dd0c494bc25a">
+                    <propertyInstance
+                      Id="11810ca4-3d57-4700-91da-aab32137fc14"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2a094ccc-2279-4f01-a689-24146179023b"
+            name="Password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="02aa82d9-2456-447b-8945-5d2da5cf0d35"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3DPassword"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8f40d99d-dbc2-4c28-8946-6611c48144b4"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f5bca32-6f6a-447a-9e81-7bdcd35a2132">
+                    <propertyInstance
+                      Id="d12976c4-7347-4db3-b679-5df362a96970"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7381f74-e6f9-41f6-94ed-385ea3343981">
+                    <propertyInstance
+                      Id="20c449eb-5c0a-406e-adf8-e1248571434c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e67dde5-47e3-4ad7-930d-f220f6f4ef18">
+                    <propertyInstance
+                      Id="e9e7109d-bdc3-4903-94ca-e7c12ccbd3c3"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="99d6f649-5e72-4776-9e6b-140f9bc0f8fe">
+                    <propertyInstance
+                      Id="2e686630-69ce-4e75-b446-df9b8a91d391"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0d45abf-0876-4ff4-978a-f16855692f3f">
+                    <propertyInstance
+                      Id="369c812a-854e-4c93-bad8-58a3beaad005"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9cdfd9bb-84af-4117-b2e3-2b224565d742">
+                    <propertyInstance
+                      Id="e9ff4ee8-2657-4314-847f-1143dfc3129b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c612af41-6303-4f0c-bcd9-999d4969c97d">
+                    <propertyInstance
+                      Id="b6e41987-5585-4994-8ddd-f32d9a45d835"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="112941fe-3973-4501-b745-ce78523a3d63"
+            name="Username"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="98acd753-8847-4494-af2a-5dd600bb4339"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3DUsername"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d7652ed5-6bc0-4597-99a5-9779f3bddfef"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2367f221-4f3d-463c-b3f3-22b140ec178e">
+                    <propertyInstance
+                      Id="98233c1a-d040-42e8-8870-2d147b2e12ab"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2834e10b-287a-41fc-bcd5-e77751f1d019">
+                    <propertyInstance
+                      Id="0c27e057-234b-4dcc-b88d-6b81352c1392"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b40bfaf4-2c43-435c-a4f4-62d01e360c57">
+                    <propertyInstance
+                      Id="9a30d0fe-fa82-4221-a483-9a6ab012265f"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67c7e770-06ea-4ed1-8352-a53d0e877a4b">
+                    <propertyInstance
+                      Id="058568d6-f7cd-433d-8dcb-209a66ccf86f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="560e8e53-ea30-4e96-92b1-2d2ca5a972b0">
+                    <propertyInstance
+                      Id="0cdaa497-725b-4540-9a25-b2c2e9654ec9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="941ed811-7f71-4b89-a38d-5017ce869f25">
+                    <propertyInstance
+                      Id="ac41be2c-ba23-4ab4-8b30-c60d1c28253c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23b67f73-0b33-45ef-9bc9-6bd8c42ea00b">
+                    <propertyInstance
+                      Id="1d6181d0-364d-4c02-9964-c94a596e2966"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="40869e92-d575-4bf0-bb4f-0de5650667de"
+            name="Weight"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="99b7b125-49f7-4b0c-9de3-36d402deee6d"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3DWeight"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5d0bf151-be0c-49d7-a93f-1637f75d3a59"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e641a407-ceb2-4d27-bd20-14af165debfe">
+                    <propertyInstance
+                      Id="9759488f-2de5-4758-a31a-dbb50c49ff5a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a309bc4-e22c-4213-8961-c1300892ad80">
+                    <propertyInstance
+                      Id="67a2a510-35b1-4e73-af66-8b4133158a6c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f0a1efd1-cdac-46da-a657-e756cecbfefe">
+                    <propertyInstance
+                      Id="ae55f2bc-bc8d-4d60-8e14-22dafa74bc99"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9856bd8-d471-447b-833b-01d88f894dc3">
+                    <propertyInstance
+                      Id="3b98074d-cab8-4776-ac4a-697567607204"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9be2632c-4f1e-40ae-b897-3a607038b7f5">
+                    <propertyInstance
+                      Id="03d93f45-073a-4b18-8039-6bfc683b921f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30f921ec-f8de-4140-858d-9b79a4408b79">
+                    <propertyInstance
+                      Id="c2a75369-270a-45a3-8b1e-c9a28ab3ee37"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a54bd6da-33b1-41f6-9a2b-37b8d9233548">
+                    <propertyInstance
+                      Id="a8580a8d-4b86-40e1-83fe-c23c27b044f6"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0d8462f0-7ccd-40dc-818d-f6caa9917324"
+            name="PropertyChanged"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9e6c5029-663b-4223-8234-c29cfae28ed3"
+                handle="viewcode://./CodeSchema_Event?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3DPropertyChanged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7a880d4a-ccf6-4c05-a2de-0f5e17ab576a"
+                name="event"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75341653-f3a0-4c89-81c5-e9d0a67a41b7">
+                    <propertyInstance
+                      Id="20c88c91-7456-4b11-98f8-4297e2e685c2"
+                      name="Add"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9725060a-9470-4f7c-b716-702844d50601">
+                    <propertyInstance
+                      Id="fcb150ce-d260-41cb-b9ac-ef99875597a3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0428729c-f2e8-4e2a-bc99-41f00e3f102c">
+                    <propertyInstance
+                      Id="6530e869-77bf-4690-b862-f272472c70ac"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fadc92c8-8267-4879-be4a-de0fad3dacee">
+                    <propertyInstance
+                      Id="34b9cffa-d67d-44d6-8b32-e08adaebc86c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="91dac73e-1850-4454-abc8-4cb86b4caf77">
+                    <propertyInstance
+                      Id="e22ca5dd-e754-4ccc-a3b9-b962dc8b2b2c"
+                      name="Remove"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="896f9686-953f-4959-86bf-97e133834ee0"
+                LastKnownName="PropertyChangedEventHandler"
+                LastKnownLocation="Package9_0018.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cb95b51e-3b37-426c-8872-ffb76a695ca6"
+            name="name"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="70132312-992e-4884-ab3b-c598b378a40a"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3Dname"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cb151a48-97c1-4d77-980f-2ca90c7f5bb8"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="029b118e-c419-4506-b8ef-8cc3033721f9">
+                    <propertyInstance
+                      Id="85563d6e-eaef-4cff-9b08-63702ca8c87d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="007a9b2c-ff6d-4342-9f72-d4b65a2a11e4">
+                    <propertyInstance
+                      Id="395bfc50-f625-4c04-b1f3-35a6bd6d4ab8"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5ca50c8-e85a-4e4d-a2c5-414d53c8c118">
+                    <propertyInstance
+                      Id="0589f7d1-5413-4724-b00a-9d8814453ff7"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ecd14f36-6556-4235-abe9-e92735140125">
+                    <propertyInstance
+                      Id="2201983b-67f0-4bbf-bc2a-46e4201db416"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3356723-36ec-41b4-8eee-23c94733aa13">
+                    <propertyInstance
+                      Id="64e3692d-486c-4551-8805-d6eb70235028"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cbe6e253-2d12-449e-a28a-8a0491befb47"
+            name="password"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0b7c73a1-9df5-4c6e-8c84-6e1305dc2991"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3Dpassword"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="90b00610-6688-4e10-89d1-e39df220852f"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="60fc9c79-cb37-4dd2-beec-821b2e81c8e2">
+                    <propertyInstance
+                      Id="07215521-fb63-4faa-920e-150daf42e32d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56946676-e9b7-4c19-a2ce-4016f29f656d">
+                    <propertyInstance
+                      Id="89e2c8ee-d012-49b5-899b-0cfd8e9a735b"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f68bc26-f72f-4bb4-8f95-56ef7f70861c">
+                    <propertyInstance
+                      Id="8df4fcd0-eb24-48ca-a41a-88b4f6b27941"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="703ebc13-60a6-4023-9a3d-ccfd363b52f6">
+                    <propertyInstance
+                      Id="5f064afc-9f7d-4b24-a780-48626d3b3625"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="302c0f29-241a-44f5-b9c0-84189e9d080d">
+                    <propertyInstance
+                      Id="3e08126c-fc5e-484b-b584-ba2e23d22832"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0faa5613-e5af-46f7-a5ad-bcfff8a567a2"
+            name="username"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="06f7c4c8-9e6a-4e02-8ddd-23222d01eddf"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3Dusername"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="493427eb-66ad-4cdf-a881-b3940dfc77d1"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9549bc28-27f9-4fae-8d05-7cfea6382596">
+                    <propertyInstance
+                      Id="a16f5411-1892-4180-b72c-22db18615370"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="57d69078-7244-429d-ac16-df5fded80d21">
+                    <propertyInstance
+                      Id="79351038-49b8-4add-b1cb-d6f3731b39f9"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27cfec26-ce8a-4844-bdfb-6e862e8e6775">
+                    <propertyInstance
+                      Id="c31a43f9-f51f-4250-b84b-79dd1a56faec"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="95c425b1-8279-446b-b73c-72d7fe6d4801">
+                    <propertyInstance
+                      Id="1eb10dab-27a1-4ecd-9057-bc178533e6db"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3c94f8c-b6ba-414e-b0bb-8a3d9fa212e9">
+                    <propertyInstance
+                      Id="72438a4f-17b8-450f-919c-4196b49e89b3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ababc018-10b3-4a5a-9e55-ba265a3cdad0"
+            name="weight"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f9130e21-f0bf-48d0-983e-8eb7ee3fe021"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3Dweight"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="06c28997-2ffe-4809-af88-779e256967db"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4f3fe9e9-8171-4f6c-bbbc-bb66cc864aa8">
+                    <propertyInstance
+                      Id="8b72be01-7b98-4cff-b63e-2ffd5417cfea"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b3dc70b-b276-48cb-b1d6-7aa3994e4557">
+                    <propertyInstance
+                      Id="5c0ef1a4-c4ee-4f7c-b56b-6fa3fb434d87"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="795c4747-0df6-4bbb-8c44-cec7520da1ae">
+                    <propertyInstance
+                      Id="5929793a-57c1-42cf-9157-f79b14e81ed3"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38048f60-b9f5-44cd-9b33-8af9f4f3a43a">
+                    <propertyInstance
+                      Id="b0e57d16-c519-4060-8976-1f9e4ffbeee2"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94eb6bfa-df43-4500-aef9-f2aca2173706">
+                    <propertyInstance
+                      Id="5801815e-c0f1-4a3c-9269-d8a5f50ffdd8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="Project Diagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9d189062-dd11-4fdb-b8e2-2e4dcee1a7ae"
+            name="RaisePropertyChanged"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0f05fbed-dcac-4f85-8a2e-06e0f19fee5a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3D(Name%3DRaisePropertyChanged OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9ddd65f2-237d-4705-a40e-50ec0d9bcc56"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9e4b180f-0d5b-4d5f-b8b6-224e4bb32376">
+                    <propertyInstance
+                      Id="33b04ac4-ea23-4060-a798-07ff47568f3c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef255c86-83f6-4640-899a-9a2ad2c65cc5">
+                    <propertyInstance
+                      Id="b1168780-68c2-49e5-a069-d3117f9afb0c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e44223b-8e73-4a73-8027-27a7c4228949">
+                    <propertyInstance
+                      Id="af6cb3c7-e632-445c-aab0-609afb9a200f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9540a358-f9ee-4496-ab1a-7483ed90beeb">
+                    <propertyInstance
+                      Id="4ec2ba84-982f-4716-afb0-c33089abe7af"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92b03f28-582c-439f-bf60-87f076342160">
+                    <propertyInstance
+                      Id="e3328b7f-422a-4bcd-a795-596bd306dd31"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="40b34df0-d277-4c4e-93e3-19ee42216252">
+                    <propertyInstance
+                      Id="949be966-d4f3-4a16-b751-cca25ee471ee"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="af60151b-455c-4804-aaa0-19c2e61409d6"
+                  name="propertyName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8cac4e50-1157-4792-a2c9-51e840c9200e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3D(Name%3DRaisePropertyChanged OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DpropertyName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Project Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="91cf4ae5-5025-4f0b-98e2-edbc163d0173"
+            name="User"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a28455de-dec4-4ea5-bd7c-7eccf71a5abf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a954e16c-d0e0-4b60-8e81-f89b9ee1ae47"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a04d59b-ba3b-44be-b5c2-55c11f99043c">
+                    <propertyInstance
+                      Id="5cd6e2eb-9fb8-42e5-8b94-41f54676526e"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bab4cd8-5872-495a-81c4-fda8c8637a95">
+                    <propertyInstance
+                      Id="220a02b1-ecda-4b05-b281-e48aa7b378c7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51df2a0c-2053-463a-93c0-6d76fb07a5e3">
+                    <propertyInstance
+                      Id="4dc1622d-644f-481f-94c0-b91a0d521bf2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d54cd65e-09bb-4af8-9639-6d218d462710">
+                    <propertyInstance
+                      Id="42a7a275-23f0-4d96-babc-16757496661c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5c8821a6-08c5-4bd8-adf2-501a7d27d6bd">
+                    <propertyInstance
+                      Id="ac7aaa14-a7d3-49db-a273-a6d1ebc9aca3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ad42038-8123-453c-8dce-ade47364f797">
+                    <propertyInstance
+                      Id="d6feddf0-7756-42e6-92dc-854b6c51b051"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4bbb5809-de56-4bd6-9980-79140c052bce"
+                  name="name"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="12dd4805-91b8-4eaf-aff2-b219027278bf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dname"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Project Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0cd44b6d-cfb4-410a-afa3-8b33dabf458f"
+                  name="weight"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2636b9c4-e775-4c45-bc1d-ee06a5ce0af0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dweight"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Project Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9cde37ad-da51-42f5-b51a-92e1a0378507"
+                  name="userName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="23d4b8b9-fbff-4e5c-ac45-72f427858c25"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Project Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9c959d3c-f427-4f81-81b6-d334d5438382"
+                  name="password"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d2642e81-13be-4b82-8a59-6401fcfe1a7a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FMB%2FDocuments%2FDissertation%2FGymImprover%2FGymImprover%2FBin%2FDebug%2FGymImprover.dll Namespace%3DGymImprover.Model Type%3DUser Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dpassword"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Project Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

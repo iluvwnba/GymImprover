@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="31c25224-b91a-428f-af66-7b7fab8a7772"
+  name="Navigation"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ffcc61eb-670f-4f6f-bb85-f95a6a54a58e"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Windows.Navigation"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="4cc7a758-8092-41be-bcd8-5359acc373e3"
+        name="NavigationEventArgs"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="dcb09e6d-4549-4d95-8377-4db0c415ca9a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2FSystem.Windows.dll&quot; Namespace%3DSystem.Windows.Navigation Type%3DNavigationEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="be74a187-bff1-40f2-9749-a08bda9efe85"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6359e692-5196-47dd-a73b-92c6338cf524">
+                <propertyInstance
+                  Id="7070a25c-daf3-494d-9602-4ebabc9a47aa"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d9b940f9-3cfd-42ea-9c10-39947c7a1f44">
+                <propertyInstance
+                  Id="e87a9b43-06f5-4edd-85e2-853844830b33"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2ffb5098-e560-4bf3-b495-2eb1ddaf9fdb">
+                <propertyInstance
+                  Id="25cda1a7-53e6-4944-9d39-bb91a575dcc6"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="84b4803b-11f6-4035-9ee0-e9cc0b5052df">
+                <propertyInstance
+                  Id="73d09a25-99c7-4d60-b568-02b29f793eb7"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c049224c-e04f-4776-a297-5c575b03ad69">
+                <propertyInstance
+                  Id="a44f49d9-185f-4ef5-a921-7dc08915196d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="cf851f38-bb4e-44aa-aefd-3a20dc91605f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a49a7a73-ffb2-41a2-891a-aec1db1f00df"
+              LastKnownName="EventArgs"
+              LastKnownLocation="Package1_0018.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e9de4c49-9aac-4aab-9c10-dc56a3d8cbe4"
+        name="NavigationFailedEventArgs"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e838f8b6-eb6b-4d13-9e63-9e08ec38903c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2FWindowsPhone%2Fv8.0%2FMicrosoft.Phone.dll&quot; Namespace%3DSystem.Windows.Navigation Type%3DNavigationFailedEventArgs"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="39ad4f57-debb-43aa-a8d4-89cb63d8a08c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d8710ba1-e028-41e0-a811-b6074fe8d65a">
+                <propertyInstance
+                  Id="39ecd43d-f721-42d8-8bd9-06cd599f0a1d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="744d9a79-6cd9-482d-9aae-865cdad63adb">
+                <propertyInstance
+                  Id="aa72de45-ecdc-4e1a-a8a0-7175a52e2ae1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="097e96ac-78c2-42a9-a263-de744c6080e8">
+                <propertyInstance
+                  Id="dce3d193-c76f-4a0e-b6f9-ce0193d8fab8"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e8e6ed1f-4f8c-4a7a-9930-7ed1040a0414">
+                <propertyInstance
+                  Id="6ddbe5be-ca76-48ba-a427-380fbaf14998"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8cf23516-8015-4128-9440-ecd1ef457ee6">
+                <propertyInstance
+                  Id="8bd76de0-1031-426d-83f6-744500b4fffd"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="1051c4c9-c0f1-49da-af38-3e39a8a4f77c"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a49a7a73-ffb2-41a2-891a-aec1db1f00df"
+              LastKnownName="EventArgs"
+              LastKnownLocation="Package1_0018.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
