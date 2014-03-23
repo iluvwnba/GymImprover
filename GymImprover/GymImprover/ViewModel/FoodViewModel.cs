@@ -11,35 +11,59 @@ using GymImprover.Commands;
 
 namespace GymImprover.ViewModel
 {
-    class FoodViewModel : INotifyPropertyChanged
+    public class FoodViewModel : INotifyPropertyChanged
     {
-        private int calories;
-        private int protein;
-        private int fat;
-        private int carbohydrates;
+        private int calories = 0;
+        private int protein = 0;
+        private int fat = 0;
+        private int carbohydrates = 0;
         private ObservableCollection<Food> userFood;
         private ICommand loadFood;
         private ICommand addMeal;
+        public ICommand resetFood;
+        private Food theDaysFood;
 
         public FoodViewModel()
         {
             this.loadFood = new DelegateCommand(this.LoadFoodAction);
             this.addMeal = new DelegateCommand(this.AddMealAction);
+            this.resetFood = new DelegateCommand(this.ResetFoodAction);
+            theDaysFood = new Food();
+            this.LoadFoodAction(this);
         }
+
+        //Actions
 
         public void LoadFoodAction(object p)
         {
-            this.DataSource.Add(new Food());
+            if (DataSource.Count == 0)
+            {
+                this.DataSource.Add(theDaysFood);
+            }
         }
 
         public void AddMealAction(object p)
         {
-            this.DaysFood.Calories += this.calories;
-            this.DaysFood.Carbohydrates += this.carbohydrates;
-            this.DaysFood.Fats += this.fat;
-            this.DaysFood.Protein += this.protein;
+                theDaysFood.Calories += this.calories;
+                theDaysFood.Carbohydrates += this.carbohydrates;
+                theDaysFood.Fats += this.fat;
+                theDaysFood.Protein += this.protein;
         }
 
+        public void ResetFoodAction(object p)
+        {
+            theDaysFood.Calories = 0;
+            theDaysFood.Carbohydrates = 0;
+            theDaysFood.Fats = 0;
+            theDaysFood.Protein = 0;
+        }
+
+        //Commands
+
+        public ICommand ResetFood
+        {
+            get { return this.resetFood; }
+        }
         public ICommand LoadFood
         {
             get { return this.loadFood; }
@@ -50,11 +74,13 @@ namespace GymImprover.ViewModel
             get { return this.addMeal; }
         }
 
+        //Select Properties
+
         public int SelectedCalories {
             get {
-                if (this.DaysFood != null)
+                if (this.theDaysFood != null)
                 {
-                    return this.DaysFood.Calories;
+                    return this.theDaysFood.Calories;
                 }
                 return 0;
             }
@@ -64,9 +90,9 @@ namespace GymImprover.ViewModel
         public int SelectedProtein {
             get
             {
-                if (this.DaysFood != null)
+                if (this.theDaysFood != null)
                 {
-                    return this.DaysFood.Protein;
+                    return this.theDaysFood.Protein;
                 }
                 return 0;
             }
@@ -75,9 +101,9 @@ namespace GymImprover.ViewModel
         public int SelectedFats {
             get
             {
-                if (this.DaysFood != null)
+                if (this.theDaysFood != null)
                 {
-                    return this.DaysFood.Fats;
+                    return this.theDaysFood.Fats;
                 }
                 return 0;
             }
@@ -86,14 +112,16 @@ namespace GymImprover.ViewModel
         public int SelectedCarbohydrates {
             get
             {
-                if (this.DaysFood != null)
+                if (this.theDaysFood != null)
                 {
-                    return this.DaysFood.Carbohydrates;
+                    return this.theDaysFood.Carbohydrates;
                 }
                 return 0;
             }
             set { this.carbohydrates = value; } 
         }
+
+
 
         public ObservableCollection<Food> DataSource
         {
@@ -108,31 +136,8 @@ namespace GymImprover.ViewModel
         }
 
 
-        private Food daysFood;
-        public Food DaysFood
-        {
-            get { return this.daysFood; }
-            set
-            {
-                {
-                    if (this.daysFood != value)
-                    {
-                        this.daysFood = value;
-                        if (this.daysFood != null)
-                        {
-                            this.calories = this.daysFood.Calories;
-                            this.protein = this.daysFood.Protein;
-                            this.fat = this.daysFood.Fats;
-                            this.carbohydrates = this.daysFood.Carbohydrates;
-                        }
-                        this.RaisePropertyChanged("SelectedCarbohydrates");
-                        this.RaisePropertyChanged("SelectedCalories");
-                        this.RaisePropertyChanged("SelectedProtein");
-                        this.RaisePropertyChanged("SelectedFats");
-                    }
-                }
-            }
-        }
+       
+        
 
 
         public event PropertyChangedEventHandler PropertyChanged;

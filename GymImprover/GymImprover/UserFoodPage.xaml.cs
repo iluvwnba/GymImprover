@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using GymImprover.ViewModel;
+
 namespace GymImprover
 {
     public partial class UserFoodPage : PhoneApplicationPage
@@ -15,7 +15,12 @@ namespace GymImprover
         public UserFoodPage()
         {
             InitializeComponent();
-            this.DataContext = new FoodViewModel();
+            this.DataContext = App.FoodViewModel;
+        }
+
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/AddFoodPage.xaml", UriKind.Relative)); 
         }
     }
 }

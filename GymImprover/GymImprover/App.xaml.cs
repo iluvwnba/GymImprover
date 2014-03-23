@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using GymImprover.Resources;
+using GymImprover.ViewModel;
 
 namespace GymImprover
 {
@@ -17,6 +18,32 @@ namespace GymImprover
         /// </summary>
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
+
+        private static UserViewModel userViewModel = null;
+        public static UserViewModel UserViewModel
+        {
+            get
+            {
+                if (userViewModel == null)
+                {
+                    userViewModel = new UserViewModel();
+                }
+                return userViewModel;
+            }
+        }
+
+        private static FoodViewModel foodViewModel = null;
+        public static FoodViewModel FoodViewModel
+        {
+            get
+            {
+                if (foodViewModel == null)
+                {
+                    foodViewModel = new FoodViewModel();
+                }
+                return foodViewModel;
+            }
+        }
 
         /// <summary>
         /// Constructor for the Application object.
@@ -54,6 +81,8 @@ namespace GymImprover
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
+
+
 
         }
 

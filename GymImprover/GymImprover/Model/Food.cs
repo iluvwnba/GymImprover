@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace GymImprover.Model
 {
-    class Food : INotifyPropertyChanged
-    {
+    public class Food : INotifyPropertyChanged
+    { 
 
         private int calories = 0;
         private int protein = 0;

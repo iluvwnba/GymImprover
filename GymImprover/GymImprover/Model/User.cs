@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace GymImprover.Model
 {
-    class User : INotifyPropertyChanged
+    public class User : INotifyPropertyChanged
     {
         private string name;
         private int weight;

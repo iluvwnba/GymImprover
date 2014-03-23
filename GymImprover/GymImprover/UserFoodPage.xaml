@@ -29,32 +29,31 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" MinHeight="152"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <phone:LongListSelector ItemsSource="{Binding DataSource}" HorizontalAlignment="Left" Height="415" Margin="10,10,0,0" VerticalAlignment="Top" Width="436" Grid.RowSpan="3">
+            <phone:LongListSelector ItemsSource="{Binding DataSource}" HorizontalAlignment="Left" Height="415" Margin="-9,10,0,0" VerticalAlignment="Top" Width="436" Grid.RowSpan="3">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="Calories:" Grid.Row="0"/>
-                                <TextBlock Text="{Binding Calories}" Grid.Row="0"/>
-                                <TextBlock Text="Protein:" Grid.Row="1"/>
-                                <TextBlock Text="{Binding Protein}" Grid.Row="1"/>
-                                <TextBlock Text="Fats:" Grid.Row="2"/>
-                                <TextBlock Text="{Binding Fats}" Grid.Row="2"/>
-                                <TextBlock Text="Carbs:" Grid.Row="3"/>
-                                <TextBlock Text="{Binding Carbohydrates}" Grid.Row="3"/>
+                            <TextBlock Text="Calories: "/>
+                            <TextBlock Text="{Binding Calories}"/>
+                            <TextBlock Text="Protein:"/>
+                            <TextBlock Text="{Binding Protein}"/>
+                            <TextBlock Text="Fats:"/>
+                            <TextBlock Text="{Binding Fats}"/>
+                            <TextBlock Text="Carbs:"/>
+                            <TextBlock Text="{Binding Carbohydrates}"/>
                         </StackPanel>
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>
             </phone:LongListSelector>
-            <Button Content="Load" HorizontalAlignment="Left" Margin="174,127,0,0" VerticalAlignment="Top" Command="{Binding LoadFood}" Grid.Row="4"/>
+            <Button Content="Load" HorizontalAlignment="Left" Margin="174,127,0,0" VerticalAlignment="Top" Command="{Binding LoadFood}" Grid.Row="2" Height="72" Width="100"/>
         </Grid>
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar Mode="Minimized" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
-            <shell:ApplicationBarIconButton Text="Eat" IconUri="/Assets/AppBar/add.png"/>
+        <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
+            <shell:ApplicationBarIconButton Text="Eat" IconUri="/Assets/AppBar/add.png" Click="ApplicationBarIconButton_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

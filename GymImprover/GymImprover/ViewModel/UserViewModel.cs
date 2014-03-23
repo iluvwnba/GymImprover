@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace GymImprover.ViewModel
 {
-    class UserViewModel : INotifyPropertyChanged
+    public class UserViewModel : INotifyPropertyChanged
     {
         private string name;
         private int weight;
@@ -31,9 +31,11 @@ namespace GymImprover.ViewModel
             this.DataSource.Add(new User("Paul", 10, "Paul", "password"));
         }
 
+
         public ICommand LoadData {
             get { return this.loadData; }
         }
+
 
 
         public ObservableCollection<User> DataSource
