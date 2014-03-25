@@ -13,11 +13,11 @@ namespace GymImprover.ViewModel
 {
     public class FoodViewModel : INotifyPropertyChanged
     {
-        private int calories = 0;
-        private int protein = 0;
-        private int fat = 0;
-        private int carbohydrates = 0;
-        private ObservableCollection<Food> userFood;
+        private int _calories = 0;
+        private int _protein = 0;
+        private int _fat = 0;
+        private int _carbohydrates = 0;
+        private ObservableCollection<Food> _userFood;
         private ICommand loadFood;
         private ICommand addMeal;
         public ICommand resetFood;
@@ -44,10 +44,10 @@ namespace GymImprover.ViewModel
 
         public void AddMealAction(object p)
         {
-                theDaysFood.Calories += this.calories;
-                theDaysFood.Carbohydrates += this.carbohydrates;
-                theDaysFood.Fats += this.fat;
-                theDaysFood.Protein += this.protein;
+                theDaysFood.Calories += this._calories;
+                theDaysFood.Carbohydrates += this._carbohydrates;
+                theDaysFood.Fats += this._fat;
+                theDaysFood.Protein += this._protein;
         }
 
         public void ResetFoodAction(object p)
@@ -78,47 +78,31 @@ namespace GymImprover.ViewModel
 
         public int SelectedCalories {
             get {
-                if (this.theDaysFood != null)
-                {
-                    return this.theDaysFood.Calories;
-                }
                 return 0;
             }
-            set { this.calories = value; } 
+            set { this._calories = value; } 
         }
 
         public int SelectedProtein {
             get
             {
-                if (this.theDaysFood != null)
-                {
-                    return this.theDaysFood.Protein;
-                }
                 return 0;
             }
-            set { this.protein = value; }
+            set { this._protein = value; }
         }
         public int SelectedFats {
             get
             {
-                if (this.theDaysFood != null)
-                {
-                    return this.theDaysFood.Fats;
-                }
                 return 0;
             }
-            set { this.fat = value; } 
+            set { this._fat = value; } 
         }
         public int SelectedCarbohydrates {
             get
             {
-                if (this.theDaysFood != null)
-                {
-                    return this.theDaysFood.Carbohydrates;
-                }
                 return 0;
             }
-            set { this.carbohydrates = value; } 
+            set { this._carbohydrates = value; } 
         }
 
 
@@ -127,18 +111,13 @@ namespace GymImprover.ViewModel
         {
             get
             {
-                if (this.userFood == null)
+                if (this._userFood == null)
                 {
-                    this.userFood = new ObservableCollection<Food>();
+                    this._userFood = new ObservableCollection<Food>();
                 }
-                return this.userFood;
+                return this._userFood;
             }
         }
-
-
-       
-        
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 

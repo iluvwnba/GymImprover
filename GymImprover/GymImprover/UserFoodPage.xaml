@@ -48,7 +48,6 @@
                     </DataTemplate>
                 </phone:LongListSelector.ItemTemplate>
             </phone:LongListSelector>
-            <Button Content="Load" HorizontalAlignment="Left" Margin="174,127,0,0" VerticalAlignment="Top" Command="{Binding LoadFood}" Grid.Row="2" Height="72" Width="100"/>
         </Grid>
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>

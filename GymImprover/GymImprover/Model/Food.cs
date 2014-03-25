@@ -10,52 +10,52 @@ namespace GymImprover.Model
     public class Food : INotifyPropertyChanged
     { 
 
-        private int calories = 0;
-        private int protein = 0;
-        private int fat = 0;
-        private int carbohydrates = 0;
+        private int _calories = 0;
+        private int _protein = 0;
+        private int _fat = 0;
+        private int _carbohydrates = 0;
 
         public int Calories {
-            get { return calories; }
+            get { return _calories; }
             set
             {
-                if (this.calories != value)
+                if (this._calories != value)
                 {
-                    this.calories = value;
+                    this._calories = value;
                     this.RaisePropertyChanged("Calories");
                 }
             }
         }
         public int Fats {
-            get { return fat; }
+            get { return _fat; }
             set 
             {
-                if (this.fat != value)
+                if (this._fat != value)
                 {
-                    this.fat = value;
+                    this._fat = value;
                     this.RaisePropertyChanged("Fats");
                 }
             } 
         }
         public int Protein {
-            get { return protein; }
+            get { return _protein; }
             set   
             {
-                if (this.protein != value)
+                if (this._protein != value)
                 {
-                    this.protein = value;
+                    this._protein = value;
                     this.RaisePropertyChanged("Protein");
                 }
             } 
         }
 
         public int Carbohydrates {
-            get { return carbohydrates; } 
+            get { return _carbohydrates; } 
             set
             {
-                if (this.carbohydrates != value)
+                if (this._carbohydrates != value)
                 {
-                    this.carbohydrates = value;
+                    this._carbohydrates = value;
                     this.RaisePropertyChanged("Carbohydrates");
                 }
             } 
