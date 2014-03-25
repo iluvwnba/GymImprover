@@ -47,5 +47,10 @@ namespace GymImprover
         //    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
         //    ApplicationBar.MenuItems.Add(appBarMenuItem);
         //}
+        private void NewAccount(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/NewAccountPage.xaml", UriKind.Relative)); 
+
+        }
     }
 }

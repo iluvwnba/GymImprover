@@ -4,6 +4,7 @@ using System.Resources;
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Navigation;
+using GymImprover.Model;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using GymImprover.Resources;
@@ -19,29 +20,28 @@ namespace GymImprover
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
 
-        private static UserViewModel userViewModel = null;
+
+
+
+        private static UserViewModel _userViewModel = null;
         public static UserViewModel UserViewModel
         {
             get
             {
-                if (userViewModel == null)
-                {
-                    userViewModel = new UserViewModel();
-                }
-                return userViewModel;
+                return _userViewModel;
             }
         }
 
-        private static FoodViewModel foodViewModel = null;
+        private static FoodViewModel _foodViewModel = null;
         public static FoodViewModel FoodViewModel
         {
             get
             {
-                if (foodViewModel == null)
+                if (_foodViewModel == null)
                 {
-                    foodViewModel = new FoodViewModel();
+                    _foodViewModel = new FoodViewModel();
                 }
-                return foodViewModel;
+                return _foodViewModel;
             }
         }
 
@@ -80,10 +80,21 @@ namespace GymImprover
                 // Caution:- Use this under debug mode only. Application that disables user idle detection will continue to run
                 // and consume battery power when the user is not using the phone.
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
+
+                //Database Creation
+                const string dbConnectionString = "Data Source=isostore:/User.sdf";
+                using (var db = new UserDataContext(dbConnectionString))
+                {
+                    //create database if it doesnt exist 
+                    if (db.DatabaseExists() == false)
+                    {
+                        db.CreateDatabase();
+                        db.SubmitChanges();
+                    }
+                }
+                _userViewModel = new UserViewModel(dbConnectionString);
+                _userViewModel.LoadAllUsersFromDataBase();
             }
-
-
-
         }
 
         // Code to execute when the application is launching (eg, from Start)

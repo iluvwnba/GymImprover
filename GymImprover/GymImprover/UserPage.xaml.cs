@@ -13,12 +13,10 @@ namespace GymImprover
 {
     public partial class UserPage : PhoneApplicationPage
     {
-        UserViewModel model;
         public UserPage()
         {
             InitializeComponent();
-            model = new UserViewModel();
-            this.DataContext = model;
+            this.DataContext = App.UserViewModel;
         }
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)

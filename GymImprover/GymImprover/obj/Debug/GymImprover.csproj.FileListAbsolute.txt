@@ -21,3 +21,4 @@ C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\About.g.cs
 C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\UserPage.g.cs
 C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\UserFoodPage.g.cs
 C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\AddFoodPage.g.cs
+C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\NewAccountPage.g.cs

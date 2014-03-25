@@ -1,52 +1,50 @@
-﻿using GymImprover.Model;
+﻿using System;
+using System.Linq;
 using GymImprover.Commands;
-using System;
-using System.Collections.Generic;
+using GymImprover.Model;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
+using Microsoft.Phone.Logging;
 
 namespace GymImprover.ViewModel
 {
     public class UserViewModel : INotifyPropertyChanged
     {
-        private string name;
-        private int weight;
-        private string username;
-        private string password;
-        private ObservableCollection<User> userData;
-        private ICommand loadData;
+        private readonly ICommand _loadData;
+        private ICommand _addUser;
+        private readonly UserDataContext _userDb;
+        private string _name;
+        private string _password;
+        private ObservableCollection<User> _allUsers;
+        private string _username;
+        private int _weight;
+        private User _currentUser;
 
-        public UserViewModel()
+        public UserViewModel(string userDbConnectionString)
         {
-            this.loadData = new DelegateCommand(this.LoadDataAction);
+            _userDb = new UserDataContext(userDbConnectionString);
+            this._addUser = new DelegateCommand(this.AddUser);
         }
 
-        private void LoadDataAction(object p)
+        public ICommand LoadData
         {
-            this.DataSource.Add(new User("Martin", 100, "Martin", "password"));
-            this.DataSource.Add(new User("Paul", 10, "Paul", "password"));
+            get { return _loadData; }
         }
 
-
-        public ICommand LoadData {
-            get { return this.loadData; }
+        public ICommand AddUserCommand
+        {
+            get { return _addUser; }
         }
 
-
-
-        public ObservableCollection<User> DataSource
+        public ObservableCollection<User> AllUsers
         {
-            get 
+            get
+            {  return _allUsers;}
+            set
             {
-                if (this.userData == null)
-                {
-                    this.userData = new ObservableCollection<User>();
-                }
-                return this.userData;
+                _allUsers = value;
+                RaisePropertyChanged("AllUsers");
             }
         }
 
@@ -54,83 +52,111 @@ namespace GymImprover.ViewModel
         {
             get
             {
-                if (this.CurrentUser != null)
+                if (CurrentUser != null)
                 {
-                    return this.CurrentUser.Name;
+                    return CurrentUser.Name;
                 }
                 return string.Empty;
             }
-            set { this.name = value; }
+            set { _name = value; }
         }
-
 
         public string SelectPassword
         {
             get
             {
-                if (this.CurrentUser != null)
+                if (CurrentUser != null)
                 {
-                    return this.CurrentUser.Password;
+                    return CurrentUser.Password;
                 }
                 return string.Empty;
             }
-            set { this.password = value; }
+            set { _password = value; }
         }
 
-        public string SelectUserName
+        public string SelectUsername
         {
             get
             {
-                if (this.CurrentUser != null)
+                if (CurrentUser != null)
                 {
-                    return this.CurrentUser.Username;
+                    return CurrentUser.Username;
                 }
                 return string.Empty;
             }
-            set { this.username = value; }
+            set { _username = value; }
         }
 
-        public int SelectWeight { 
-            get 
+        public int SelectWeight
+        {
+            get
             {
-                if(this.CurrentUser != null)
+                if (CurrentUser != null)
                 {
-                    return this.CurrentUser.Weight;
+                    return CurrentUser.Weight;
                 }
                 return 0;
             }
-            set { this.weight = value; }
+            set { _weight = value; }
         }
 
-        private User currentUser;
-        public User CurrentUser {
-            get { return this.currentUser; }
+        public User CurrentUser
+        {
+            get { return _currentUser; }
             set
             {
-                if (this.currentUser != value)
+                if (_currentUser != value)
                 {
-                    this.currentUser = value;
-                    if (this.currentUser != null)
+                    _currentUser = value;
+                    if (_currentUser != null)
                     {
-                            this.name = this.currentUser.Name;
-                            this.weight = this.currentUser.Weight;
-                            this.password = this.currentUser.Password;
-                            this.username = this.currentUser.Username;
+                        _name = _currentUser.Name;
+                        _weight = _currentUser.Weight;
+                        _password = _currentUser.Password;
+                        _username = _currentUser.Username;
                     }
-                    this.RaisePropertyChanged("SelectWeight");
-                    this.RaisePropertyChanged("SelectName");
-                    this.RaisePropertyChanged("SelectPassword");
-                    this.RaisePropertyChanged("SelectUserName");
+                    RaisePropertyChanged("SelectWeight");
+                    RaisePropertyChanged("SelectName");
+                    RaisePropertyChanged("SelectPassword");
+                    RaisePropertyChanged("SelectUserName");
                 }
             }
-    
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+
+        public void SaveChangesToDataBase()
+        {
+            _userDb.SubmitChanges();
+        }
+
+        public void LoadAllUsersFromDataBase()
+        {
+            //queery all users in db
+            var usersInDb = from User user in _userDb.Users
+                select user;
+            AllUsers = new ObservableCollection<User>(usersInDb);
+        }
+
+        public void DeleteUserFromDb(User userToDelete)
+        {
+            //remote from all user observable collection
+            AllUsers.Remove(userToDelete);
+            //remove from datacontext
+            _userDb.Users.DeleteOnSubmit(userToDelete);
+            SaveChangesToDataBase();
+        }
+
+        private void AddUser(object p)
+        {
+            _userDb.Users.InsertOnSubmit(new User(SelectName, SelectWeight, SelectUsername, SelectPassword));
+            SaveChangesToDataBase();
+        }
+
         private void RaisePropertyChanged(string propertyName)
         {
-            PropertyChangedEventHandler handler = this.PropertyChanged;
+            PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null)
             {
                 handler(this, new PropertyChangedEventArgs(propertyName));
