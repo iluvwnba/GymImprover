@@ -17,7 +17,7 @@ namespace GymImprover
         public MainPage()
         {
             InitializeComponent();
-
+            this.DataContext = App.UserViewModel;
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
@@ -25,11 +25,6 @@ namespace GymImprover
         private void About_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new Uri("/About.xaml", UriKind.Relative)); 
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("/UserPage.xaml", UriKind.Relative)); 
         }
 
         // Sample code for building a localized ApplicationBar
@@ -50,7 +45,11 @@ namespace GymImprover
         private void NewAccount(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/NewAccountPage.xaml", UriKind.Relative)); 
+        }
 
+        private void Login(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/UserPage.xaml", UriKind.Relative));
         }
     }
 }

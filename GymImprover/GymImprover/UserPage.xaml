@@ -28,7 +28,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:LongListSelector ItemsSource="{Binding AllUsers}" SelectedItem="{Binding CurrentUser}" Height="300" Margin="0,0,0,307">
+            <phone:LongListSelector DataContext="{Binding LoggedInUser}" ItemsSource="{Binding CurrentUser}"  Height="300" Margin="0,0,0,307">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">

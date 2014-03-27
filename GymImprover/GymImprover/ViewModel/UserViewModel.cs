@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using GymImprover.Commands;
 using GymImprover.Model;
@@ -11,7 +12,7 @@ namespace GymImprover.ViewModel
 {
     public class UserViewModel : INotifyPropertyChanged
     {
-        private readonly ICommand _loadData;
+        private ICommand _login;
         private ICommand _addUser;
         private readonly UserDataContext _userDb;
         private string _name;
@@ -20,33 +21,46 @@ namespace GymImprover.ViewModel
         private string _username;
         private int _weight;
         private User _currentUser;
+        private ObservableCollection<User> _loggedInUser;
 
         public UserViewModel(string userDbConnectionString)
         {
             _userDb = new UserDataContext(userDbConnectionString);
             this._addUser = new DelegateCommand(this.AddUser);
+            this._login = new DelegateCommand(this.Login);
         }
 
-        public ICommand LoadData
-        {
-            get { return _loadData; }
-        }
 
         public ICommand AddUserCommand
         {
             get { return _addUser; }
         }
 
+        public ICommand LoginCommand
+        {
+
+            get { return _login; }
+        }
+
         public ObservableCollection<User> AllUsers
         {
-            get
-            {  return _allUsers;}
+            get { return _allUsers; }
             set
             {
                 _allUsers = value;
                 RaisePropertyChanged("AllUsers");
             }
         }
+
+        public ObservableCollection<User> LoggedInUser
+        {
+            get { return _loggedInUser; }
+            set
+            {
+                _loggedInUser = value;
+                RaisePropertyChanged("LoggedInUser");
+            }
+        } 
 
         public string SelectName
         {
@@ -150,11 +164,37 @@ namespace GymImprover.ViewModel
 
         private void AddUser(object p)
         {
-            _userDb.Users.InsertOnSubmit(new User(SelectName, SelectWeight, SelectUsername, SelectPassword));
+            _userDb.Users.InsertOnSubmit(new User("Martin", 10, "user1", "pass"));
+            _userDb.Users.InsertOnSubmit(new User("Joe", 10, "user2", "pass"));
             SaveChangesToDataBase();
+            LoadAllUsersFromDataBase();
         }
 
-        private void RaisePropertyChanged(string propertyName)
+        private void Login(object p)
+        {
+            var loggingInUser = from User user in _userDb.Users
+                                where user.Username == "user1"
+                                && user.Password == "pass"
+                                select user;
+            User tempLoginUser = null;
+            foreach (User user in loggingInUser)
+            {
+                tempLoginUser = user;
+            }
+            if (tempLoginUser != null)
+            {
+                CurrentUser = tempLoginUser;
+                LoggedInUser = new ObservableCollection<User>();
+                LoggedInUser.Add(CurrentUser);
+                foreach (User user in LoggedInUser)
+                {
+                    Debug.WriteLine(user.Name);
+                }
+            }
+        }
+
+
+    private void RaisePropertyChanged(string propertyName)
         {
             PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null)
