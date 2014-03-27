@@ -51,8 +51,8 @@
                 <RowDefinition Height="544*"/>
                 <RowDefinition Height="63*"/>
             </Grid.RowDefinitions>
-            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,43,0,0" TextWrapping="Wrap" Text="{Binding SelectUsername, Mode=TwoWay}" VerticalAlignment="Top" Width="456"/>
-            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,148,0,0" TextWrapping="Wrap" Text="{Binding SelectPassword, Mode=TwoWay}" VerticalAlignment="Top" Width="456"/>
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,43,0,0" TextWrapping="Wrap" Text="{Binding LoginUsername, Mode=TwoWay}" VerticalAlignment="Top" Width="456"/>
+            <TextBox HorizontalAlignment="Left" Height="72" Margin="0,148,0,0" TextWrapping="Wrap" Text="{Binding LoginPassword, Mode=TwoWay}" VerticalAlignment="Top" Width="456"/>
             <Button Content="Login" HorizontalAlignment="Center" Margin="0,250,181,0" VerticalAlignment="Top" Command="{Binding LoginCommand}" Click="Login"/>
             <Button Content="New Account" HorizontalAlignment="Left" Margin="83,327,0,0" VerticalAlignment="Top" Width="291" Click="NewAccount"/>
 

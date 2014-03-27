@@ -27,21 +27,11 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:LongListSelector DataContext="{Binding LoggedInUser}" ItemsSource="{Binding CurrentUser}"  Height="300" Margin="0,0,0,307">
-                <phone:LongListSelector.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Name:"/>
-                            <TextBlock Text="{Binding Name}"/>
-                            <TextBlock Text="Weight:" Margin="10,0,0,0"/>
-                            <TextBlock Text="{Binding Weight}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </phone:LongListSelector.ItemTemplate>
-            </phone:LongListSelector>
-            <Button Content="Load Data" Command="{Binding LoadData}" HorizontalAlignment="Left" Margin="148,305,0,0" VerticalAlignment="Top"/>
-
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0" DataContext="{Binding CurrentUser}">
+            <TextBlock Text="Name:" Margin="5,5"/>
+            <TextBlock Text="{Binding Name}" Margin="5, 25"/>
+            <TextBlock Text="Weight:" Margin="5,50"/>
+            <TextBlock Text="{Binding Weight}" Margin="5,75"/>
         </Grid>
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>

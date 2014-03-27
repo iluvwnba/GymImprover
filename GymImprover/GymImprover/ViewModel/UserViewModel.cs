@@ -38,7 +38,6 @@ namespace GymImprover.ViewModel
 
         public ICommand LoginCommand
         {
-
             get { return _login; }
         }
 
@@ -60,7 +59,42 @@ namespace GymImprover.ViewModel
                 _loggedInUser = value;
                 RaisePropertyChanged("LoggedInUser");
             }
-        } 
+        }
+
+        private string _loginUsername;
+        public string LoginUsername
+        {
+            get {
+                if (_loginUsername != null)
+                {
+                    return _loginUsername;
+                }
+                return string.Empty;
+            }
+            set
+            {
+                _loginUsername = value;
+                RaisePropertyChanged("LoginUsername");
+            }
+        }
+
+        private string _loginPassword;
+        public string LoginPassword
+        {
+            get
+            {
+                if (_loginPassword != null)
+                {
+                    return _loginPassword;
+                }
+                return string.Empty;
+            }
+            set
+            {
+                _loginPassword = value;
+                RaisePropertyChanged("LoginPassword");
+            }
+        }
 
         public string SelectName
         {
@@ -173,8 +207,8 @@ namespace GymImprover.ViewModel
         private void Login(object p)
         {
             var loggingInUser = from User user in _userDb.Users
-                                where user.Username == "user1"
-                                && user.Password == "pass"
+                                where user.Username == LoginUsername
+                                && user.Password == LoginPassword
                                 select user;
             User tempLoginUser = null;
             foreach (User user in loggingInUser)
@@ -184,11 +218,11 @@ namespace GymImprover.ViewModel
             if (tempLoginUser != null)
             {
                 CurrentUser = tempLoginUser;
-                LoggedInUser = new ObservableCollection<User>();
-                LoggedInUser.Add(CurrentUser);
+                LoggedInUser = new ObservableCollection<User> {CurrentUser};
+                RaisePropertyChanged("LoggedInUser");
                 foreach (User user in LoggedInUser)
                 {
-                    Debug.WriteLine(user.Name);
+                    Debug.WriteLine("Debug Login " + user.Name);
                 }
             }
         }
