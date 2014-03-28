@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -22,17 +23,34 @@ namespace GymImprover.ViewModel
         private ICommand addMeal;
         public ICommand resetFood;
         private Food theDaysFood;
+        private UserDataContext _userdb;
+        private User foodUser;
 
-        public FoodViewModel()
+        public FoodViewModel(User user, UserDataContext context)
         {
             this.loadFood = new DelegateCommand(this.LoadFoodAction);
             this.addMeal = new DelegateCommand(this.AddMealAction);
             this.resetFood = new DelegateCommand(this.ResetFoodAction);
-            theDaysFood = new Food();
             this.LoadFoodAction(this);
+            _userdb = context;
+            foodUser = user;
         }
 
+
         //Actions
+
+        private Food getUsersFood(UserDataContext context)
+        {
+            var foodItem = from Food food in context.Users
+                where food.Id == foodUser.UserId
+                select food;
+            Food tempFood = null;
+            foreach (Food food in foodItem)
+            {
+                tempFood = food;
+            }
+            return tempFood;
+        }
 
         public void LoadFoodAction(object p)
         {
@@ -44,18 +62,20 @@ namespace GymImprover.ViewModel
 
         public void AddMealAction(object p)
         {
-                theDaysFood.Calories += this._calories;
-                theDaysFood.Carbohydrates += this._carbohydrates;
-                theDaysFood.Fats += this._fat;
-                theDaysFood.Protein += this._protein;
+            foodUser.Food.Calories += this._calories;
+            foodUser.Food.Carbohydrates += this._carbohydrates;
+            foodUser.Food.Fats += this._fat;
+            foodUser.Food.Protein += this._protein;
+            _userdb.SubmitChanges();
         }
 
         public void ResetFoodAction(object p)
         {
-            theDaysFood.Calories = 0;
-            theDaysFood.Carbohydrates = 0;
-            theDaysFood.Fats = 0;
-            theDaysFood.Protein = 0;
+            foodUser.Food.Calories = 0;
+            foodUser.Food.Carbohydrates = 0;
+            foodUser.Food.Fats = 0;
+            foodUser.Food.Protein = 0;
+            _userdb.SubmitChanges();
         }
 
         //Commands

@@ -20,7 +20,12 @@ namespace GymImprover
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
 
+        private const string _dbConnectionString = "Data Source=isostore:/User.sdf";
 
+        public static string DbConnectionString
+        {
+            get { return _dbConnectionString; }
+        }
 
 
         private static UserViewModel _userViewModel = null;
@@ -37,12 +42,9 @@ namespace GymImprover
         {
             get
             {
-                if (_foodViewModel == null)
-                {
-                    _foodViewModel = new FoodViewModel();
-                }
                 return _foodViewModel;
             }
+            set { _foodViewModel = value; }
         }
 
         /// <summary>
@@ -82,8 +84,7 @@ namespace GymImprover
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
 
                 //Database Creation
-                const string dbConnectionString = "Data Source=isostore:/User.sdf";
-                using (var db = new UserDataContext(dbConnectionString))
+                using (var db = new UserDataContext(DbConnectionString))
                 {
                     //create database if it doesnt exist 
                     if (db.DatabaseExists() == false)
@@ -92,7 +93,7 @@ namespace GymImprover
                         db.SubmitChanges();
                     }
                 }
-                _userViewModel = new UserViewModel(dbConnectionString);
+                _userViewModel = new UserViewModel(DbConnectionString);
                 _userViewModel.LoadAllUsersFromDataBase();
             }
         }

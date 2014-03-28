@@ -32,6 +32,8 @@
             <TextBlock Text="{Binding Name}" Margin="5, 25"/>
             <TextBlock Text="Weight:" Margin="5,50"/>
             <TextBlock Text="{Binding Weight}" Margin="5,75"/>
+            <TextBlock Text="Cals:" Margin="5,100"/>
+            <TextBlock Text="{Binding Food.Calories}" Margin="5,125"/>
         </Grid>
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>

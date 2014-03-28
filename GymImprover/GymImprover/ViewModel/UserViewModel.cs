@@ -30,6 +30,10 @@ namespace GymImprover.ViewModel
             this._login = new DelegateCommand(this.Login);
         }
 
+        public UserDataContext UserDB
+        {
+            get { return _userDb; }
+        }
 
         public ICommand AddUserCommand
         {
@@ -198,10 +202,12 @@ namespace GymImprover.ViewModel
 
         private void AddUser(object p)
         {
-            _userDb.Users.InsertOnSubmit(new User("Martin", 10, "user1", "pass"));
-            _userDb.Users.InsertOnSubmit(new User("Joe", 10, "user2", "pass"));
+            //_userDb.Users.InsertOnSubmit(new User(_name, _weight, _username, _password));
+            User newUser = new User("martin", 100, "user", "pass");
+            newUser.Food = new Food();
+            newUser.Food.Calories = 100;
+            _userDb.Users.InsertOnSubmit(newUser);
             SaveChangesToDataBase();
-            LoadAllUsersFromDataBase();
         }
 
         private void Login(object p)

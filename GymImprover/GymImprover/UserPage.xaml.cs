@@ -21,6 +21,7 @@ namespace GymImprover
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)
         {
+            App.FoodViewModel = new FoodViewModel(App.UserViewModel.CurrentUser, App.UserViewModel.UserDB);
             NavigationService.Navigate(new Uri("/UserFoodPage.xaml", UriKind.Relative)); 
         }
     }

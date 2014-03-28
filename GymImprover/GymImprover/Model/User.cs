@@ -9,7 +9,7 @@ using System.ComponentModel;
 namespace GymImprover.Model{
 
     [Table]
-    public class User : INotifyPropertyChanged
+    public class User : INotifyPropertyChanged, INotifyPropertyChanging
     {
         //Constructor
         public User(string name, int weight, string userName, string password)
@@ -100,13 +100,33 @@ namespace GymImprover.Model{
             } 
         }
 
-        
-        
-
         // Version column aids update performance.
         [Column(IsVersion = true)]
         private Binary _version;
 
+
+
+        // Link to Food
+        [Column] 
+        internal int _foodId;
+
+        private EntityRef<Food> _food;
+
+        [Association(Storage = "_food", ThisKey = "_foodId", OtherKey = "Id", IsForeignKey = true)]
+        public Food Food
+        {
+            get { return _food.Entity; }
+            set
+            {
+                RaisePropertyChanging("Food");
+                _food.Entity = value;
+                if (value != null)
+                {
+                    _foodId = value.Id;
+                }
+                RaisePropertyChanged("Food");
+            }
+        }
 
         #region INotifyPropertyChanged Members
 

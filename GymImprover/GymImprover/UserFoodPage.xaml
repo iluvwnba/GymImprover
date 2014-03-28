@@ -32,7 +32,7 @@
                 <RowDefinition Height="Auto" MinHeight="152"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <phone:LongListSelector ItemsSource="{Binding DataSource}" HorizontalAlignment="Left" Height="415" Margin="-9,10,0,0" VerticalAlignment="Top" Width="436" Grid.RowSpan="3">
+            <phone:LongListSelector ItemsSource="{Binding DataSource}" HorizontalAlignment="Left" Height="415" Margin="10,0,0,0" VerticalAlignment="Top" Width="436" Grid.RowSpan="2">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
