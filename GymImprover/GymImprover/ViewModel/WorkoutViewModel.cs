@@ -36,7 +36,7 @@ namespace GymImprover.ViewModel
                 select workout;
             if (workoutsForUser.Count() != 0)
             {        
-                Workouts.Clear();
+
                 foreach (Workout workout in workoutsForUser)
                 {
                     Debug.WriteLine(workout.Id);
@@ -52,7 +52,7 @@ namespace GymImprover.ViewModel
 
         public void NewWorkout(object p)
         {
-            Workout workout = new Workout("NEW WORKOUT", _currentUser);
+            Workout workout = new Workout(WorkoutName, _currentUser);
             workout.User = _currentUser;
             _userDb.Workouts.InsertOnSubmit(workout);
             _userDb.SubmitChanges();
