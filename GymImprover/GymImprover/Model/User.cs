@@ -18,8 +18,9 @@ namespace GymImprover.Model{
             this.Weight = weight;
             this.Username = userName;
             this.Password = password;
+            this.loadActions();
         }
-        public User() { }
+        public User() { this.loadActions(); }
 
         private int _userId;
         [Column(IsPrimaryKey = true, IsDbGenerated = true, DbType = "INT NOT NULL Identity", CanBeNull = false, AutoSync = AutoSync.OnInsert)]
@@ -100,10 +101,6 @@ namespace GymImprover.Model{
             } 
         }
 
-        // Version column aids update performance.
-        [Column(IsVersion = true)]
-        private Binary _version;
-
 
 
         // Link to Food
@@ -127,6 +124,63 @@ namespace GymImprover.Model{
                 RaisePropertyChanged("Food");
             }
         }
+
+        // Link to Workouts
+        private EntitySet<Workout> _workouts;
+
+        [Association(Storage = "_workouts", OtherKey = "_userId", ThisKey = "UserId")]
+        public EntitySet<Workout> Workouts
+        {
+            get { return this._workouts; }
+            set { this._workouts.Assign(value);}
+        }
+
+        private void attach_Workout(Workout workout)
+        {
+            RaisePropertyChanging("Workout");
+            workout.User = this;
+        }
+
+        private void detach_Workout(Workout workout)
+        {
+            RaisePropertyChanging("Workout");
+            workout.User = null;
+        }
+
+        private void loadActions()
+        {
+            _workouts = new EntitySet<Workout>(
+                new Action<Workout>(this.attach_Workout),
+                new Action<Workout>(this.detach_Workout)
+                );
+        }
+            /*
+        [Column]
+        internal int _workoutId;
+
+        private EntityRef<Workout> _workout;
+
+        [Association(Storage = "_workout", ThisKey = "_workoutId", OtherKey = "Id", IsForeignKey = true)]
+        public Workout Workout
+        {
+            get { return _workout.Entity; }
+            set
+            {
+                RaisePropertyChanging("Workout");
+                _workout.Entity = value;
+                if (value != null)
+                {
+                    _workoutId = value.Id;
+                }
+                RaisePropertyChanged("Workout");
+            }
+        }
+        */
+
+        // Version column aids update performance.
+        [Column(IsVersion = true)]
+        private Binary _version;
+
 
         #region INotifyPropertyChanged Members
 

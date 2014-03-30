@@ -32,13 +32,13 @@
             <TextBlock Text="{Binding Name}" Margin="5, 25"/>
             <TextBlock Text="Weight:" Margin="5,50"/>
             <TextBlock Text="{Binding Weight}" Margin="5,75"/>
-            <TextBlock Text="Cals:" Margin="5,100"/>
+            <TextBlock Text="Todays Calories:" Margin="5,100"/>
             <TextBlock Text="{Binding Food.Calories}" Margin="5,125"/>
         </Grid>
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar Mode="Default" Opacity="1.0" IsMenuEnabled="True" IsVisible="True">
-            <shell:ApplicationBarIconButton Text="Workout" IconUri="/Assets/AppBar/new.png"/>
+            <shell:ApplicationBarIconButton Text="Workout" IconUri="/Assets/AppBar/new.png" Click="Workout"/>
             <shell:ApplicationBarIconButton Text="Eat" IconUri="/Assets/AppBar/Eat.png" Click="ApplicationBarIconButton_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>

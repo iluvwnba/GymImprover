@@ -24,5 +24,11 @@ namespace GymImprover
             App.FoodViewModel = new FoodViewModel(App.UserViewModel.CurrentUser, App.UserViewModel.UserDB);
             NavigationService.Navigate(new Uri("/UserFoodPage.xaml", UriKind.Relative)); 
         }
+
+        private void Workout(object sender, EventArgs e)
+        {
+            App.WorkoutViewModel = new WorkoutViewModel(App.UserViewModel.CurrentUser ,App.UserViewModel.UserDB);
+            NavigationService.Navigate(new Uri("/WorkoutPage.xaml", UriKind.Relative));
+        }
     }
 }

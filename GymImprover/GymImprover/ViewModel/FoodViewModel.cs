@@ -22,7 +22,6 @@ namespace GymImprover.ViewModel
         private ICommand loadFood;
         private ICommand addMeal;
         public ICommand resetFood;
-        private Food theDaysFood;
         private UserDataContext _userdb;
         private User foodUser;
 
@@ -54,10 +53,7 @@ namespace GymImprover.ViewModel
 
         public void LoadFoodAction(object p)
         {
-            if (DataSource.Count == 0)
-            {
-                this.DataSource.Add(theDaysFood);
-            }
+
         }
 
         public void AddMealAction(object p)
