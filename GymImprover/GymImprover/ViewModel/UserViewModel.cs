@@ -175,7 +175,7 @@ namespace GymImprover.ViewModel
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+
 
 
         public void SaveChangesToDataBase()
@@ -202,10 +202,8 @@ namespace GymImprover.ViewModel
 
         private void AddUser(object p)
         {
-            //_userDb.Users.InsertOnSubmit(new User(_name, _weight, _username, _password));
-            User newUser = new User("martin", 100, "user", "pass");
+            User newUser = new User(_name, _weight, _username, _password);
             newUser.Food = new Food();
-            newUser.Food.Calories = 100;
             _userDb.Users.InsertOnSubmit(newUser);
             SaveChangesToDataBase();
         }
@@ -233,7 +231,7 @@ namespace GymImprover.ViewModel
             }
         }
 
-
+    public event PropertyChangedEventHandler PropertyChanged;
     private void RaisePropertyChanged(string propertyName)
         {
             PropertyChangedEventHandler handler = PropertyChanged;

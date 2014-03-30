@@ -27,6 +27,12 @@ namespace GymImprover
             get { return _dbConnectionString; }
         }
 
+        private static WorkoutViewModel _workoutViewModel = null;
+        public static WorkoutViewModel WorkoutViewModel
+        {
+            get { return _workoutViewModel; }
+            set { _workoutViewModel = value; }
+        }
 
         private static UserViewModel _userViewModel = null;
         public static UserViewModel UserViewModel

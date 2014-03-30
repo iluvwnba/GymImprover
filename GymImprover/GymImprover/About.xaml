@@ -28,7 +28,9 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBlock Text="This is the about page" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock TextWrapping="Wrap" Margin="5,0" Text="Gym Improver is a program created to improve peoples gym  experience and therefore gym performance." Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Margin="5, 100" Text="Prototype v1" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Margin="5, 125" Text="Author: Martin Barnes" Style="{StaticResource PhoneTextNormalStyle}"/>
         </Grid>
     </Grid>
 
