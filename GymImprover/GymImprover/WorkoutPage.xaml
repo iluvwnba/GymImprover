@@ -27,27 +27,42 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:Pivot HorizontalAlignment="Left" Height="686" Title="Workout" VerticalAlignment="Top" Width="456">
-                <phone:PivotItem CacheMode="{x:Null}" Header="Add">
+            <phone:Pivot x:Name="Pivot" LoadingPivotItem="Pivot_OnLoadingPivotItem" HorizontalAlignment="Left" Height="686" Title="Workout" VerticalAlignment="Top" Width="456">
+                <phone:PivotItem x:Name="AddPivotItem" CacheMode="{x:Null}" Header="Add">
                     <Grid x:Name="AddPanel" Height="512" Width="440">
                         <TextBox HorizontalAlignment="Left" Height="72" Margin="-10,48,0,0" TextWrapping="Wrap" Text="{Binding WorkoutName, Mode=TwoWay}" VerticalAlignment="Top" Width="437"/>
                         <Button Command="{Binding AddWorkout}" Content="Add Workout" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                     </Grid>
                 </phone:PivotItem>
-                <phone:PivotItem CacheMode="{x:Null}" Header="View">
+                <phone:PivotItem x:Name="ViewPivotItem" CacheMode="{x:Null}" Header="View">
                     <Grid x:Name="ViewPanel" Height="512" Width="440" Margin="0,0,0,0">
-                        <phone:LongListSelector ItemsSource="{Binding Workouts}">
+                        <phone:LongListSelector ItemsSource="{Binding Workouts}" Height="500">
                             <phone:LongListSelector.ItemTemplate>   
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Workout Name" Margin="5,5"/>
-                                        <TextBlock Text="{Binding Name}" Margin="5,35"/>
-                                        <TextBlock Text="Workout Date" Margin="5,60"/>
-                                        <TextBlock Text="{Binding Date}" Margin="5,85"/>
+                                        <TextBlock Text="Workout Name"/>
+                                        <TextBlock Text="{Binding Name}"/>
+                                        <TextBlock Text="Workout Date"/>
+                                        <TextBlock Text="{Binding Date}"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </phone:LongListSelector.ItemTemplate>
                         </phone:LongListSelector>
+                    </Grid>
+                </phone:PivotItem>
+                <phone:PivotItem x:Name="ExercisePivotItem" CacheMode="{x:Null}" Header="Exercise">
+                    <Grid x:Name="ExercisePanel" Height="512" Width="440" Margin="0,0,0,0">
+                        <phone:LongListSelector ItemsSource="{Binding Exercises}">
+                            <phone:LongListSelector.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Exercise Name" Margin="5,5"/>
+                                        <TextBlock Text="{Binding Name}" Margin="5,35"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </phone:LongListSelector.ItemTemplate>
+                        </phone:LongListSelector>
+                        <Button Command="{Binding AddExerciseCommand}" Content="Add" HorizontalAlignment="Left" Margin="142,412,0,0" VerticalAlignment="Top"/>
                     </Grid>
                 </phone:PivotItem>
             </phone:Pivot>

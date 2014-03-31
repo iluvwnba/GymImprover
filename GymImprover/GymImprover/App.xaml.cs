@@ -53,6 +53,14 @@ namespace GymImprover
             set { _foodViewModel = value; }
         }
 
+        private static ExerciseViewModel _exerciseViewModel = null;
+
+        public static ExerciseViewModel ExerciseViewModel
+        {
+            get { return _exerciseViewModel; }
+            set { _exerciseViewModel = value; }
+        }
+
         /// <summary>
         /// Constructor for the Application object.
         /// </summary>

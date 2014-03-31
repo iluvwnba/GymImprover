@@ -19,6 +19,7 @@ namespace GymImprover.ViewModel
         private User _currentUser;
         private ICommand _addWorkout;
         private string _workoutName;
+        private Workout _currentWorkout;
 
         public WorkoutViewModel(User currentUser, UserDataContext context)
         {
@@ -36,7 +37,6 @@ namespace GymImprover.ViewModel
                 select workout;
             if (workoutsForUser.Count() != 0)
             {        
-
                 foreach (Workout workout in workoutsForUser)
                 {
                     Debug.WriteLine(workout.Id);
@@ -78,7 +78,24 @@ namespace GymImprover.ViewModel
                 _workouts = value;
                 RaisePropertyChanged("Workouts");
             }
-        } 
+        }
+
+        public Workout CurrentWorkout
+        {
+            get { return _currentWorkout; }
+            set
+            {
+                if (_currentWorkout != value)
+                {
+                    _currentWorkout = value;
+                    if (_currentWorkout != null)
+                    {
+                        _workoutName = _currentWorkout.Name;
+                    }
+                    RaisePropertyChanged("WorkoutName");
+                }
+            }
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
