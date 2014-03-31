@@ -12,13 +12,18 @@ namespace GymImprover.Model
     public class Workout : INotifyPropertyChanged, INotifyPropertyChanging
     {
         private string _name;
+        private DateTime _theDateTime;
+
 
         public Workout()
         {
+            this.LoadActions();
         }
         public Workout(string name, User user)
         {
             this._name = name;
+            this._theDateTime = DateTime.Today;
+            this.LoadActions();
         }
 
         private int _id;
@@ -47,6 +52,12 @@ namespace GymImprover.Model
             }
         }
 
+        [Column]
+        public string Date
+        {
+            get { return _theDateTime.ToShortDateString(); }
+            private set { }
+        }
 
         [Column] internal int _userId;
         private EntityRef<User> _user;
@@ -67,56 +78,35 @@ namespace GymImprover.Model
             }
         }
 
-            /*
-             * 
-             * 
-             * 
-             *         private EntitySet<User> _user;
+        private EntitySet<Exercise> _exercises;
 
-        [Association(Storage = "_user", OtherKey = "_workoutId", ThisKey = "Id")]
-        public EntitySet<User> User
+        [Association(Storage = "_exercises", OtherKey = "_workoutId", ThisKey = "Id")]
+        public EntitySet<Exercise> Exercises
         {
-            get { return _user; }
-            set { this._user.Assign(value); }
+            get { return this._exercises; }
+            set { this._exercises.Assign(value);}
         }
 
-        private void attach_User(User user)
+        private void attach_Exercise(Exercise exercise)
         {
-            RaisePropertyChanging("User");
-            user.Workout = this;
+           RaisePropertyChanging("Exercises");
+            exercise.Workout = this;
         }
 
-        private void detatch_User(User user)
+        private void detach_exercise(Exercise exercise)
         {
-            RaisePropertyChanging("User");
-            user.Workout = null;
+            RaisePropertyChanging("Exercises");
+            exercise.Workout = null;
         }
-             * 
-             * 
-        [Column]
-        internal int _exerciseId;
 
-        private EntityRef<Exercise> _exercise;
-
-        [Association(Storage = "_workout", ThisKey = "_exerciseId", OtherKey = "ExerciseId", IsForeignKey = true)]
-        public Exercise Exercise
+        private void LoadActions()
         {
-            get { return _exercise.Entity; }
-            set
-            {
-                RaisePropertyChanging("Exercise");
-                _exercise.Entity = value;
-                if (value != null)
-                {
-                    _exercise = value.Id;
-                }
-                RaisePropertyChanged("Exercise");
-            }
+            _exercises = new EntitySet<Exercise>(
+                new Action<Exercise>(this.attach_Exercise),
+                new Action<Exercise>(this.detach_exercise)
+                );
         }
-        */
-
-
-        // Version column aids update performance.
+            // Version column aids update performance.
         [Column(IsVersion = true)]
         private Binary _version;
 

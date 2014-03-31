@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-﻿<xapCache source="C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\Bin\Debug\GymImprover_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="30/03/2014 20:59:01">
-  <file source="C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\GymImprover.dll" archivePath="GymImprover.dll" lastWriteTime="30/03/2014 20:59:00" />
-=======
-﻿<xapCache source="C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\Bin\Debug\GymImprover_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="30/03/2014 14:19:59">
-  <file source="C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\GymImprover.dll" archivePath="GymImprover.dll" lastWriteTime="30/03/2014 14:19:58" />
->>>>>>> af548fac3171d24bc68be18fefc56249c299c55b
+﻿<xapCache source="C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\Bin\Debug\GymImprover_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="31/03/2014 16:59:24">
+  <file source="C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\obj\Debug\GymImprover.dll" archivePath="GymImprover.dll" lastWriteTime="31/03/2014 16:59:23" />
   <file source="C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="19/03/2014 16:50:03" />
   <file source="C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\Assets\AppBar\add.png" archivePath="Assets\AppBar\add.png" lastWriteTime="01/01/2013 18:57:00" />
   <file source="C:\Users\MB\Documents\Dissertation\GymImprover\GymImprover\Assets\AppBar\eat.png" archivePath="Assets\AppBar\eat.png" lastWriteTime="19/03/2014 17:57:56" />

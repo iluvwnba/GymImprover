@@ -18,9 +18,9 @@ namespace GymImprover.Model{
             this.Weight = weight;
             this.Username = userName;
             this.Password = password;
-            this.loadActions();
+            this.LoadActions();
         }
-        public User() { this.loadActions(); }
+        public User() { this.LoadActions(); }
 
         private int _userId;
         [Column(IsPrimaryKey = true, IsDbGenerated = true, DbType = "INT NOT NULL Identity", CanBeNull = false, AutoSync = AutoSync.OnInsert)]
@@ -137,45 +137,24 @@ namespace GymImprover.Model{
 
         private void attach_Workout(Workout workout)
         {
-            RaisePropertyChanging("Workout");
+            RaisePropertyChanging("Workouts");
             workout.User = this;
         }
 
         private void detach_Workout(Workout workout)
         {
-            RaisePropertyChanging("Workout");
+            RaisePropertyChanging("Workouts");
             workout.User = null;
         }
 
-        private void loadActions()
+        private void LoadActions()
         {
             _workouts = new EntitySet<Workout>(
                 new Action<Workout>(this.attach_Workout),
                 new Action<Workout>(this.detach_Workout)
                 );
         }
-            /*
-        [Column]
-        internal int _workoutId;
 
-        private EntityRef<Workout> _workout;
-
-        [Association(Storage = "_workout", ThisKey = "_workoutId", OtherKey = "Id", IsForeignKey = true)]
-        public Workout Workout
-        {
-            get { return _workout.Entity; }
-            set
-            {
-                RaisePropertyChanging("Workout");
-                _workout.Entity = value;
-                if (value != null)
-                {
-                    _workoutId = value.Id;
-                }
-                RaisePropertyChanged("Workout");
-            }
-        }
-        */
 
         // Version column aids update performance.
         [Column(IsVersion = true)]

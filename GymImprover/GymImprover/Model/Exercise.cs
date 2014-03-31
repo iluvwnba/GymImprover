@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,8 @@ namespace GymImprover.Model
         private int _reps;
         private int _sets;
 
+        public Exercise(){ }
+
         public Exercise(string name, int reps, int weight, int sets)
         {
             _name = name;
@@ -24,6 +27,21 @@ namespace GymImprover.Model
             _sets = sets;
         }
 
+        private int _id;
+
+        [Column(DbType = "INT NOT NULL IDENTITY", IsDbGenerated = true, IsPrimaryKey = true)]
+        public int Id
+        {
+            get { return _id; }
+            set
+            {
+                RaisePropertyChanging("Id");
+                this._id = value;
+                RaisePropertyChanged("Id");
+            }
+        }
+
+        [Column]
         public string Name
         {
             get { return _name; }
@@ -37,7 +55,7 @@ namespace GymImprover.Model
                 }
             }
         }
-
+        [Column]
         public int Weight
         {
             get { return _weight; }
@@ -51,7 +69,7 @@ namespace GymImprover.Model
                 }
             }
         }
-
+        [Column]
         public int Reps
         {
             get { return _reps; }
@@ -65,7 +83,7 @@ namespace GymImprover.Model
                 }
             }
         }
-
+        [Column]
         public int Sets
         {
             get { return _sets; }
@@ -79,6 +97,29 @@ namespace GymImprover.Model
                 }
             }
         }
+
+        [Column] internal int _workoutId;
+        private EntityRef<Workout> _workout;
+        [Association(Storage = "_workout", OtherKey = "Id", ThisKey = "Id", IsForeignKey = true)]
+
+        public Workout Workout
+        {
+            get { return _workout.Entity; }
+            set
+            {
+                RaisePropertyChanging("Workout");
+                _workout.Entity = value;
+                if (value != null)
+                {
+                    _workoutId = value.Id;
+                }
+                RaisePropertyChanged("Workout");
+            }
+        }
+
+
+
+
         #region INotifyPropertyChanged Members
 
         public event PropertyChangedEventHandler PropertyChanged;

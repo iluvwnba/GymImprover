@@ -9,5 +9,6 @@ namespace GymImprover.Model
         public Table<User> Users;
         public Table<Food> Foods;
         public Table<Workout> Workouts;
+        public Table<Exercise> Exercises;
     }
 }

@@ -29,19 +29,21 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <phone:Pivot HorizontalAlignment="Left" Height="686" Title="Workout" VerticalAlignment="Top" Width="456">
                 <phone:PivotItem CacheMode="{x:Null}" Header="Add">
-                    <Grid x:Name="AddPanel" Height="512" Margin="0,0,-347,0">
+                    <Grid x:Name="AddPanel" Height="512" Width="440">
                         <TextBox HorizontalAlignment="Left" Height="72" Margin="-10,48,0,0" TextWrapping="Wrap" Text="{Binding WorkoutName, Mode=TwoWay}" VerticalAlignment="Top" Width="437"/>
-                        <Button Command="{Binding AddWorkout}" Content="Add Workout" HorizontalAlignment="Center" Margin="0,430,0,0" VerticalAlignment="Top"/>
+                        <Button Command="{Binding AddWorkout}" Content="Add Workout" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                     </Grid>
                 </phone:PivotItem>
                 <phone:PivotItem CacheMode="{x:Null}" Header="View">
-                    <Grid x:Name="ViewPanel" Height="512" Margin="0,0,-347,0">
+                    <Grid x:Name="ViewPanel" Height="512" Width="440" Margin="0,0,0,0">
                         <phone:LongListSelector ItemsSource="{Binding Workouts}">
                             <phone:LongListSelector.ItemTemplate>   
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Workout Name"/>
-                                        <TextBlock Text="{Binding Name}" Margin="0,25"/>
+                                        <TextBlock Text="Workout Name" Margin="5,5"/>
+                                        <TextBlock Text="{Binding Name}" Margin="5,35"/>
+                                        <TextBlock Text="Workout Date" Margin="5,60"/>
+                                        <TextBlock Text="{Binding Date}" Margin="5,85"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </phone:LongListSelector.ItemTemplate>
