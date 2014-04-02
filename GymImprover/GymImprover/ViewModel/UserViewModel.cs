@@ -214,11 +214,11 @@ namespace GymImprover.ViewModel
                                 where user.Username == LoginUsername
                                 && user.Password == LoginPassword
                                 select user;
-            User tempLoginUser = null;
-            foreach (User user in loggingInUser)
+            User tempLoginUser = loggingInUser.FirstOrDefault();
+            /*foreach (User user in loggingInUser)
             {
                 tempLoginUser = user;
-            }
+            }*/
             if (tempLoginUser != null)
             {
                 CurrentUser = tempLoginUser;
