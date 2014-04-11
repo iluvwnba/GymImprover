@@ -22,12 +22,14 @@ namespace GymImprover.ViewModel
         private int _weight;
         private User _currentUser;
         private ObservableCollection<User> _loggedInUser;
+        private PasswordHash _passwordHash;
 
         public UserViewModel(string userDbConnectionString)
         {
             _userDb = new UserDataContext(userDbConnectionString);
             this._addUser = new DelegateCommand(this.AddUser);
             this._login = new DelegateCommand(this.Login);
+            _passwordHash = new PasswordHash();
         }
 
         public UserDataContext UserDB
@@ -176,8 +178,6 @@ namespace GymImprover.ViewModel
         }
 
 
-
-
         public void SaveChangesToDataBase()
         {
             _userDb.SubmitChanges();
@@ -202,7 +202,8 @@ namespace GymImprover.ViewModel
 
         private void AddUser(object p)
         {
-            User newUser = new User(_name, _weight, _username, _password);
+            User newUser = new User(_name, _weight, 
+                _username, _password);
             newUser.Food = new Food();
             _userDb.Users.InsertOnSubmit(newUser);
             SaveChangesToDataBase();
@@ -215,10 +216,6 @@ namespace GymImprover.ViewModel
                                 && user.Password == LoginPassword
                                 select user;
             User tempLoginUser = loggingInUser.FirstOrDefault();
-            /*foreach (User user in loggingInUser)
-            {
-                tempLoginUser = user;
-            }*/
             if (tempLoginUser != null)
             {
                 CurrentUser = tempLoginUser;

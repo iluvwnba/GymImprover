@@ -109,6 +109,7 @@
     </Compile>
     <Compile Include="Model\Exercise.cs" />
     <Compile Include="Model\Food.cs" />
+    <Compile Include="Model\PasswordHash.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Model\UserDataContext.cs" />
     <Compile Include="Model\Workout.cs" />
@@ -209,6 +210,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
