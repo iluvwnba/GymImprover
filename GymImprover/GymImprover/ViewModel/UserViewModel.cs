@@ -121,7 +121,7 @@ namespace GymImprover.ViewModel
             {
                 if (CurrentUser != null)
                 {
-                    return CurrentUser.Password;
+                    return CurrentUser.PasswordHash;
                 }
                 return string.Empty;
             }
@@ -166,7 +166,7 @@ namespace GymImprover.ViewModel
                     {
                         _name = _currentUser.Name;
                         _weight = _currentUser.Weight;
-                        _password = _currentUser.Password;
+                        _password = _currentUser.PasswordHash;
                         _username = _currentUser.Username;
                     }
                     RaisePropertyChanged("SelectWeight");
@@ -202,8 +202,9 @@ namespace GymImprover.ViewModel
 
         private void AddUser(object p)
         {
-            User newUser = new User(_name, _weight, 
-                _username, _password);
+            var salt = _passwordHash.GenerateSalt();
+            var hash = _passwordHash.HashPassword(_password, salt);
+            User newUser = new User(_name, _weight, _username, hash, salt);
             newUser.Food = new Food();
             _userDb.Users.InsertOnSubmit(newUser);
             SaveChangesToDataBase();
@@ -211,19 +212,30 @@ namespace GymImprover.ViewModel
 
         private void Login(object p)
         {
-            var loggingInUser = from User user in _userDb.Users
-                                where user.Username == LoginUsername
-                                && user.Password == LoginPassword
-                                select user;
-            User tempLoginUser = loggingInUser.FirstOrDefault();
-            if (tempLoginUser != null)
+            var tempSalt = from User user in _userDb.Users
+                       where user.Username == LoginUsername
+                       select user.PasswordSalt;
+            var tempHash = from User user in _userDb.Users
+                       where user.Username == LoginUsername
+                       select user.PasswordHash;
+            string hash = tempHash.FirstOrDefault().ToString();
+            string salt = tempSalt.FirstOrDefault().ToString();
+
+            if (_passwordHash.CheckPassword(LoginPassword, salt, hash))
             {
-                CurrentUser = tempLoginUser;
-                LoggedInUser = new ObservableCollection<User> {CurrentUser};
-                RaisePropertyChanged("LoggedInUser");
-                foreach (User user in LoggedInUser)
+                var loggingInUser = from User user in _userDb.Users
+                                    where user.Username == LoginUsername
+                                    select user;
+                User tempLoginUser = loggingInUser.FirstOrDefault();
+                if (tempLoginUser != null)
                 {
-                    Debug.WriteLine("Debug Login " + user.Name);
+                    CurrentUser = tempLoginUser;
+                    LoggedInUser = new ObservableCollection<User> { CurrentUser };
+                    RaisePropertyChanged("LoggedInUser");
+                    foreach (User user in LoggedInUser)
+                    {
+                        Debug.WriteLine("Debug Login " + user.Name);
+                    }
                 }
             }
         }

@@ -12,12 +12,13 @@ namespace GymImprover.Model{
     public class User : INotifyPropertyChanged, INotifyPropertyChanging
     {
         //Constructor
-        public User(string name, int weight, string userName, string password)
+        public User(string name, int weight, string userName, string passwordHash, string passwordSalt)
         {
             this.Name = name;
             this.Weight = weight;
             this.Username = userName;
-            this.Password = password;
+            this.PasswordHash = passwordHash;
+            this.PasswordSalt = passwordSalt;
             this.LoadActions();
         }
         public User() { this.LoadActions(); }
@@ -86,21 +87,36 @@ namespace GymImprover.Model{
             
         }
 
-        private string _password;
+        private string _passwordHash;
         [Column]
-        public string Password {
-            get { return _password; }
+        public string PasswordHash {
+            get { return _passwordHash; }
             set
             {
-                if (this._password != value)
+                if (this._passwordHash != value)
                 {
-                    RaisePropertyChanging("Password");
-                    this._password = value;
-                    this.RaisePropertyChanged("Password");
+                    RaisePropertyChanging("PasswordHash");
+                    this._passwordHash = value;
+                    this.RaisePropertyChanged("PasswordHash");
                 }
             } 
         }
 
+        private string _passwordSalt;
+        [Column]
+        public string PasswordSalt
+        {
+            get { return _passwordSalt; }
+            set
+            {
+                if (this._passwordSalt != value)
+                {
+                    RaisePropertyChanging("PasswordSalt");
+                    this._passwordSalt = value;
+                    this.RaisePropertyChanged("PasswordSalt");
+                }
+            }
+        }
 
 
         // Link to Food
