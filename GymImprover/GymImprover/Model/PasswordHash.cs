@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 
 namespace GymImprover.Model
 {
-    internal class PasswordHash
+    public class PasswordHash
     {
 
         public string GenerateSalt()
