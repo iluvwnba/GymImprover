@@ -62,7 +62,11 @@ namespace GymImprover.ViewModel
             foodUser.Food.Carbohydrates += this._carbohydrates;
             foodUser.Food.Fats += this._fat;
             foodUser.Food.Protein += this._protein;
-            _userdb.SubmitChanges();
+            if (_userdb.DatabaseExists())
+            {
+                _userdb.SubmitChanges();
+            }
+            
         }
 
         public void ResetFoodAction(object p)
@@ -71,7 +75,11 @@ namespace GymImprover.ViewModel
             foodUser.Food.Carbohydrates = 0;
             foodUser.Food.Fats = 0;
             foodUser.Food.Protein = 0;
-            _userdb.SubmitChanges();
+            if (_userdb.DatabaseExists())
+            {
+                _userdb.SubmitChanges();
+
+            }
         }
 
         //Commands
