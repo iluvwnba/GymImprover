@@ -212,32 +212,41 @@ namespace GymImprover.ViewModel
 
         private void Login(object p)
         {
-            var tempSalt = from User user in _userDb.Users
-                       where user.Username == LoginUsername
-                       select user.PasswordSalt;
-            var tempHash = from User user in _userDb.Users
-                       where user.Username == LoginUsername
-                       select user.PasswordHash;
-            string hash = tempHash.FirstOrDefault().ToString();
-            string salt = tempSalt.FirstOrDefault().ToString();
-
-            if (_passwordHash.CheckPassword(LoginPassword, salt, hash))
+            try
             {
-                var loggingInUser = from User user in _userDb.Users
-                                    where user.Username == LoginUsername
-                                    select user;
-                User tempLoginUser = loggingInUser.FirstOrDefault();
-                if (tempLoginUser != null)
+                var tempSalt = from User user in _userDb.Users
+                               where user.Username == LoginUsername
+                               select user.PasswordSalt;
+                var tempHash = from User user in _userDb.Users
+                               where user.Username == LoginUsername
+                               select user.PasswordHash;
+                string hash = tempHash.FirstOrDefault().ToString();
+                string salt = tempSalt.FirstOrDefault().ToString();
+
+                if (_passwordHash.CheckPassword(LoginPassword, salt, hash))
                 {
-                    CurrentUser = tempLoginUser;
-                    LoggedInUser = new ObservableCollection<User> { CurrentUser };
-                    RaisePropertyChanged("LoggedInUser");
-                    foreach (User user in LoggedInUser)
+                    var loggingInUser = from User user in _userDb.Users
+                                        where user.Username == LoginUsername
+                                        select user;
+                    User tempLoginUser = loggingInUser.FirstOrDefault();
+                    if (tempLoginUser != null)
                     {
-                        Debug.WriteLine("Debug Login " + user.Name);
+                        CurrentUser = tempLoginUser;
+                        LoggedInUser = new ObservableCollection<User> { CurrentUser };
+                        RaisePropertyChanged("LoggedInUser");
+                        foreach (User user in LoggedInUser)
+                        {
+                            Debug.WriteLine("Debug Login " + user.Name);
+                        }
                     }
                 }
             }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            
+
         }
 
     public event PropertyChangedEventHandler PropertyChanged;

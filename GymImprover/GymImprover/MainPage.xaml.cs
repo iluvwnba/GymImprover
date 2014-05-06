@@ -5,6 +5,7 @@ using System.Net;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
+using GymImprover.Model;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using GymImprover.Resources;
@@ -49,7 +50,11 @@ namespace GymImprover
 
         private void Login(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/UserPage.xaml", UriKind.Relative));
+            App.UserViewModel.LoginCommand.Execute(null);
+            if (App.UserViewModel.CurrentUser != null)
+            {
+                NavigationService.Navigate(new Uri("/UserPage.xaml", UriKind.Relative));
+            }
         }
     }
 }

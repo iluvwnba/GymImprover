@@ -19,7 +19,6 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
         <!-- LOCALIZATION NOTE:
             To localize the displayed strings copy their values to appropriately named
             keys in the app's neutral language resource file (AppResources.resx) then
@@ -47,17 +46,18 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            
             <Grid.RowDefinitions>
                 <RowDefinition Height="544*"/>
                 <RowDefinition Height="63*"/>
             </Grid.RowDefinitions>
             <TextBox HorizontalAlignment="Left" Height="72" Margin="0,43,0,0" TextWrapping="Wrap" Text="{Binding LoginUsername, Mode=TwoWay}" VerticalAlignment="Top" Width="456"/>
             <TextBox HorizontalAlignment="Left" Height="72" Margin="0,148,0,0" TextWrapping="Wrap" Text="{Binding LoginPassword, Mode=TwoWay}" VerticalAlignment="Top" Width="456"/>
-            <Button Content="Login" HorizontalAlignment="Center" Margin="0,250,181,0" VerticalAlignment="Top" Command="{Binding LoginCommand}" Click="Login"/>
-            <Button Content="New Account" HorizontalAlignment="Left" Margin="83,327,0,0" VerticalAlignment="Top" Width="291" Click="NewAccount"/>
- 
+            <Button Content="Login" HorizontalAlignment="Center" Margin="84,293,82,0" VerticalAlignment="Top" Click="Login" Width="290"/>
+            <Button Content="New Account" HorizontalAlignment="Left" Margin="83,370,0,0" VerticalAlignment="Top" Width="291" Click="NewAccount"/>
+
         </Grid>
-        
+
         <!--Uncomment to see an alignment grid to help ensure your controls are
             aligned on common boundaries.  The image has a top margin of -32px to
             account for the System Tray. Set this to 0 (or remove the margin altogether)
