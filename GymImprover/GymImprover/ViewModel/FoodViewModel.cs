@@ -30,9 +30,9 @@ namespace GymImprover.ViewModel
             this.loadFood = new DelegateCommand(this.LoadFoodAction);
             this.addMeal = new DelegateCommand(this.AddMealAction);
             this.resetFood = new DelegateCommand(this.ResetFoodAction);
-            this.LoadFoodAction(this);
             _userdb = context;
             foodUser = user;
+            this.LoadFoodAction(this);
         }
 
 
@@ -53,7 +53,6 @@ namespace GymImprover.ViewModel
 
         public void LoadFoodAction(object p)
         {
-
         }
 
         public void AddMealAction(object p)

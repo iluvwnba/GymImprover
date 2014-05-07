@@ -27,27 +27,19 @@
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0"  DataContext="{Binding CurrentUser}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" MinHeight="152"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <phone:LongListSelector ItemsSource="{Binding DataSource}" HorizontalAlignment="Left" Height="415" Margin="10,0,0,0" VerticalAlignment="Top" Width="436" Grid.RowSpan="2">
-                <phone:LongListSelector.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Calories: "/>
-                            <TextBlock Text="{Binding Calories}"/>
-                            <TextBlock Text="Protein:"/>
-                            <TextBlock Text="{Binding Protein}"/>
-                            <TextBlock Text="Fats:"/>
-                            <TextBlock Text="{Binding Fats}"/>
-                            <TextBlock Text="Carbs:"/>
-                            <TextBlock Text="{Binding Carbohydrates}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </phone:LongListSelector.ItemTemplate>
-            </phone:LongListSelector>
+            <TextBlock Text="Calories: " Margin="5, 0"/>
+            <TextBlock Text="{Binding Food.Calories}" Margin="5, 25"/>
+            <TextBlock Text="Protein:" Margin="5, 50"/>
+            <TextBlock Text="{Binding Food.Protein}" Margin="5, 75"/>
+            <TextBlock Text="Fats:" Margin="5, 100"/>
+            <TextBlock Text="{Binding Food.Fats}" Margin="5, 125"/>
+            <TextBlock Text="Carbs:" Margin="5, 150"/>
+            <TextBlock Text="{Binding Food.Carbohydrates}" Margin="5, 175"/>
         </Grid>
     </Grid>
     <phone:PhoneApplicationPage.ApplicationBar>

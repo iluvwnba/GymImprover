@@ -15,7 +15,7 @@ namespace GymImprover
         public UserFoodPage()
         {
             InitializeComponent();
-            this.DataContext = App.FoodViewModel;
+            this.DataContext = App.UserViewModel;
         }
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)

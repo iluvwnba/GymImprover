@@ -35,19 +35,13 @@
             <Button Content="Create Account" HorizontalAlignment="Center" Margin="126,500,122,0" VerticalAlignment="Top" Command="{Binding AddUserCommand}"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
             	<Run Text="Username"/>
-            	<LineBreak/>
-            	<Run Text="e"/>
             </TextBlock>
             <TextBlock HorizontalAlignment="Left" Margin="10,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Password"/>
             <TextBlock HorizontalAlignment="Left" Margin="10,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
             	<Run Text="Name"/>
-            	<LineBreak/>
-            	<Run/>
             </TextBlock>
             <TextBlock HorizontalAlignment="Left" Margin="10,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
             	<Run Text="Weight"/>
-            	<LineBreak/>
-            	<Run/>
             </TextBlock>
         </Grid>
     </Grid>

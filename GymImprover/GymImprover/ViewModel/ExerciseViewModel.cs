@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -28,6 +29,7 @@ namespace GymImprover.ViewModel
             this._currentWorkout = currentWorkout;
             this._userDB = dataContext;
             this._addExercise = new DelegateCommand(this.AddExercise);
+            LoadExercises();
         }
 
         public ICommand AddExerciseCommand
@@ -47,12 +49,12 @@ namespace GymImprover.ViewModel
                     Exercises.Add(exercise);
                 }
             }
-
+            
         }
 
         private void AddExercise(object p)
         {
-            Exercise exercise = new Exercise("Test", 10, 5, 5);
+            Exercise exercise = new Exercise(ExerciseName, ExerciseReps, ExerciseWeight, ExerciseSets);
             exercise.Workout = _currentWorkout;
             _userDB.Exercises.InsertOnSubmit(exercise);
             _userDB.SubmitChanges();

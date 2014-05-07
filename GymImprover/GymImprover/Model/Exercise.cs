@@ -100,7 +100,7 @@ namespace GymImprover.Model
 
         [Column] internal int _workoutId;
         private EntityRef<Workout> _workout;
-        [Association(Storage = "_workout", OtherKey = "Id", ThisKey = "Id", IsForeignKey = true)]
+        [Association(Storage = "_workout", OtherKey = "Id", ThisKey = "_workoutId", IsForeignKey = true)]
 
         public Workout Workout
         {

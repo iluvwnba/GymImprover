@@ -15,6 +15,7 @@ namespace GymImprover
         public AddExercisePage()
         {
             InitializeComponent();
+            this.DataContext = App.ExerciseViewModel;
         }
     }
 }

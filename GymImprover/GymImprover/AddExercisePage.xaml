@@ -23,11 +23,27 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="Gym Improver" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock Text="Add Exercise" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="View Exercises" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <phone:LongListSelector ItemsSource="{Binding Exercises}" HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="446">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="Exercise Name" FontWeight="Bold" FontSize="20"/>
+                            <TextBlock Text="{Binding Name}"/>
+                            <TextBlock Text="Weight"/>
+                            <TextBlock Text="{Binding Weight}"/>
+                            <TextBlock Text="Sets"/>
+                            <TextBlock Text="{Binding Sets}"/>
+                            <TextBlock Text="Reps"/>
+                            <TextBlock Text="{Binding Reps}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
 
         </Grid>
     </Grid>

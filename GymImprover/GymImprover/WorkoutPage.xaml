@@ -30,16 +30,17 @@
             <phone:Pivot x:Name="Pivot" LoadingPivotItem="Pivot_OnLoadingPivotItem" HorizontalAlignment="Left" Height="686" Title="Workout" VerticalAlignment="Top" Width="456">
                 <phone:PivotItem x:Name="AddPivotItem" CacheMode="{x:Null}" Header="Add">
                     <Grid x:Name="AddPanel" Height="512" Width="440">
-                        <TextBox HorizontalAlignment="Left" Height="72" Margin="-10,48,0,0" TextWrapping="Wrap" Text="{Binding WorkoutName, Mode=TwoWay}" VerticalAlignment="Top" Width="437"/>
+                        <TextBox HorizontalAlignment="Left" Height="72" Margin="-7,46,0,0" TextWrapping="Wrap" Text="{Binding WorkoutName, Mode=TwoWay}" VerticalAlignment="Top" Width="437"/>
                         <Button Command="{Binding AddWorkout}" Content="Add Workout" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
                     </Grid>
                 </phone:PivotItem>
                 <phone:PivotItem x:Name="ViewPivotItem" CacheMode="{x:Null}" Header="View">
                     <Grid x:Name="ViewPanel" Height="512" Width="440" Margin="0,0,0,0">
-                        <phone:LongListSelector ItemsSource="{Binding Workouts}" Height="500">
+                        <phone:LongListSelector ItemsSource="{Binding Workouts}" Height="500" SelectionChanged="LongListSelector_SelectionChanged" Margin="0,10,0,2">
                             <phone:LongListSelector.ItemTemplate>   
                                 <DataTemplate>
-                                    <StackPanel Orientation="Horizontal">
+                                    <StackPanel>
+                                        <TextBlock Text="New Workout" FontWeight="Bold" FontSize="24"></TextBlock>
                                         <TextBlock Text="Workout Name"/>
                                         <TextBlock Text="{Binding Name}"/>
                                         <TextBlock Text="Workout Date"/>
@@ -52,17 +53,22 @@
                 </phone:PivotItem>
                 <phone:PivotItem x:Name="ExercisePivotItem" CacheMode="{x:Null}" Header="Exercise">
                     <Grid x:Name="ExercisePanel" Height="512" Width="440" Margin="0,0,0,0">
-                        <phone:LongListSelector ItemsSource="{Binding Exercises}">
-                            <phone:LongListSelector.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="Exercise Name" Margin="5,5"/>
-                                        <TextBlock Text="{Binding Name}" Margin="5,35"/>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </phone:LongListSelector.ItemTemplate>
-                        </phone:LongListSelector>
-                        <Button Command="{Binding AddExerciseCommand}" Content="Add" HorizontalAlignment="Left" Margin="142,412,0,0" VerticalAlignment="Top"/>
+                        <Button Content="Add" HorizontalAlignment="Left" Margin="85,430,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+                        <Button Content="View" HorizontalAlignment="Left" Margin="287,430,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+                        
+                        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Exercise Name" VerticalAlignment="Top"/>
+                        <TextBox Name="NameTextBox" Text="{Binding ExerciseName, Mode=TwoWay}"  HorizontalAlignment="Left" Height="72" Margin="0,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="440" SelectionChanged="TextBox_SelectionChanged"/>
+                       
+                        <TextBlock HorizontalAlignment="Left" Margin="10,114,0,0" TextWrapping="Wrap" Text="Weight" VerticalAlignment="Top"/>
+                        <TextBox  InputScope="Number"  Name="WeightTextBox"  Text="{Binding ExerciseWeight, Mode=TwoWay}" HorizontalAlignment="Left" Height="72" Margin="0,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="440" SelectionChanged="TextBox_SelectionChanged_1"/>
+                        
+                        <TextBlock HorizontalAlignment="Left" Margin="10,218,0,0" TextWrapping="Wrap" Text="Reps" VerticalAlignment="Top"/>
+                        <TextBox  InputScope="Number"  Name="RepsTextBox"  Text="{Binding ExerciseReps, Mode=TwoWay}" HorizontalAlignment="Left" Height="72" Margin="0,245,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="440" SelectionChanged="TextBox_SelectionChanged_2"/>
+                        
+                        <TextBlock HorizontalAlignment="Left" Margin="10,317,0,0" TextWrapping="Wrap" Text="Sets" VerticalAlignment="Top"/>
+                        <TextBox  InputScope="Number"  Name="SetsTextBox"  Text="{Binding ExerciseSets, Mode=TwoWay}" HorizontalAlignment="Left" Height="72" Margin="0,349,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="440" SelectionChanged="TextBox_SelectionChanged_3"/>
+
+
                     </Grid>
                 </phone:PivotItem>
             </phone:Pivot>

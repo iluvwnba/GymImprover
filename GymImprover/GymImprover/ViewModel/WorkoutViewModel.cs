@@ -32,6 +32,7 @@ namespace GymImprover.ViewModel
 
         public void LoadWorkouts()
         {
+            Workouts.Clear();
             var workoutsForUser = from Workout workout in _userDb.Workouts
                 where workout._userId == _currentUser.UserId
                 select workout;
@@ -39,7 +40,6 @@ namespace GymImprover.ViewModel
             {        
                 foreach (Workout workout in workoutsForUser)
                 {
-                    Debug.WriteLine(workout.Id);
                     Workouts.Add(workout);
                 }
             }
